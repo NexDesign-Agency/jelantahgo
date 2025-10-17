@@ -1,0 +1,292 @@
+/* Basic Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Homepage Sections */
+#hero {
+    background: #f4f4f4;
+    padding: 100px 0;
+}
+
+.calculator {
+    margin-top: 20px;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.testimonial-carousel {
+    margin-top: 20px;
+}
+
+.faq-accordion {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq-question {
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+/* About Page */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline li:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.timeline h4 {
+    margin-top: 0;
+}
+
+.timeline p {
+    margin-bottom: 0;
+}
+
+.timeline li:nth-child(odd) {
+    padding-right: 55%;
+    text-align: right;
+}
+
+.timeline li:nth-child(even) {
+    padding-left: 55%;
+    text-align: left;
+}
+/* Harga Page */
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.calculator label {
+    margin-top: 10px;
+}
+
+.calculator input, .calculator select, .calculator button {
+    padding: 10px;
+    margin-top: 5px;
+}
+/* Mitra Page */
+.partner-benefits {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.benefit {
+    max-width: 30%;
+}
+/* Blog Page */
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blog-post {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+}
+
+.blog-post a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+/* Testimoni Page */
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: #ddd;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testimonial-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+}
+/* Area Layanan Page */
+.map-container {
+    margin-top: 20px;
+}
+
+.service-list {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.service-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    padding: 5px 0;
+}
+/* Syarat & Ketentuan Page */
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.terms-container h2 {
+    margin-top: 20px;
+}
+/* Kontak Page */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
