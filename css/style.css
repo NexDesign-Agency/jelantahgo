@@ -669,8 +669,23 @@ a:hover {
 }
 
 /* Tentang Kami Page */
-#tentang-kami {
-    padding: 80px 20px;
+#tentang-kami .container > h2, #tentang-kami .container > h3 {
+    text-align: center;
+}
+
+#tentang-kami .container > p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
 }
 
 #tentang-kami h1, #tentang-kami h2, #tentang-kami h3, #tentang-kami h4 {
