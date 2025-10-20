@@ -8,6 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #1F2937;
+    padding-top: 80px; /* Memberi ruang untuk header fixed */
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
     padding: 0 20px;
 }
 
+/* HEADER */
 header {
     background: white;
     padding: 20px 0;
@@ -57,10 +59,11 @@ nav {
     color: #0D9488;
 }
 
+/* HERO */
 .hero {
     background: linear-gradient(135deg, #0F766E 0%, #0D9488 100%);
     color: white;
-    padding: 150px 20px 80px;
+    padding: 120px 20px 60px;
     text-align: center;
 }
 
@@ -98,6 +101,7 @@ h1 {
     transform: scale(1.05);
 }
 
+/* SECTIONS */
 section {
     padding: 60px 20px;
 }
@@ -107,14 +111,20 @@ h2 {
     font-weight: 800;
     margin-bottom: 20px;
     color: #1F2937;
+    text-align: center;
 }
 
 .intro-text {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* BENEFITS */
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,6 +145,7 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* STEPS */
 .steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -160,6 +171,7 @@ h2 {
     margin: 0 auto 20px;
 }
 
+/* PRICING */
 .pricing-table {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -179,7 +191,7 @@ h2 {
     background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
     color: white;
     border: none;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .price {
@@ -188,6 +200,233 @@ h2 {
     margin: 20px 0;
 }
 
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pricing-card ul li {
+    margin: 8px 0;
+}
+
+/* KALKULATOR */
+.calculator-section {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.calculator-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #0D9488;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.calculator-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.liter-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculate-button {
+    background: white;
+    color: #0D9488;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.calculate-button:hover {
+    background: #f0fdfa;
+}
+
+.result-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #0D9488;
+    color: #1F2937;
+}
+
+.result-title {
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 10px;
+}
+
+.result-amount {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.result-note {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+/* STATS */
+.stats-section {
+    background: #F9FAFB;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.stats-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
+    background: #0D9488;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    color: white;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* FLEX CONTAINER UNTUK KALKULATOR + STATS */
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px 60px;
+}
+
+.calculator-section,
+.stats-section {
+    flex: 1 1 45%;
+    margin: 0;
+}
+
+/* AREA LAYANAN, SIAPA BISA JUAL, TESTIMONI, BLOG */
+.area-grid,
+.siapa-grid,
+.testimoni-grid,
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.area-card,
+.siapa-card,
+.testimoni-card,
+.blog-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.area-card h3,
+.siapa-card h3,
+.blog-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0D9488;
+}
+
+.testimoni-card .stars {
+    color: #F59E0B;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.testimoni-card .author {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.testimoni-card .author small {
+    display: block;
+    color: #6B7280;
+}
+
+/* TIPS */
+.tips-section {
+    padding: 40px 20px;
+}
+
+.disclaimer {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.tips-box {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tips-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #B45309;
+    margin-bottom: 20px;
+}
+
+.tips-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-box ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.tips-box ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #B45309;
+    font-weight: bold;
+}
+
+/* FAQ */
 .faq {
     max-width: 800px;
     margin: 0 auto;
@@ -208,6 +447,7 @@ h2 {
     color: #0D9488;
 }
 
+/* CTA SECTION */
 .cta-section {
     background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
     color: white;
@@ -215,18 +455,12 @@ h2 {
     padding: 80px 20px;
 }
 
-.cta-section strong {
+.cta-section a {
     color: white;
+    text-decoration: underline;
 }
 
-footer {
-    background: #1F2937;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* Footer Styles */
+/* FOOTER */
 footer {
     background: #1F2937;
     color: #D1D5DB;
@@ -247,10 +481,6 @@ footer {
     color: white;
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-.footer-column p {
-    line-height: 1.8;
 }
 
 .footer-column ul {
@@ -297,6 +527,7 @@ footer {
     color: white;
 }
 
+/* LINK & STRONG */
 strong {
     color: #0D9488;
     font-weight: 700;
@@ -311,420 +542,68 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Kalkulator Styles */
-.calculator-section {
-    background: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.calculator-container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #0D9488;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.calculator-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: white;
-}
-
-.calculator-container p {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.liter-input {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid #E5E7EB;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.calculate-button {
-    background: #0D9488;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.calculate-button:hover {
-    background: #0F766E;
-}
-
-.result-box {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    border: 2px solid #0D9488;
-}
-
-.result-title {
-    font-size: 16px;
-    color: #6B7280;
-    margin-bottom: 10px;
-}
-
-.result-amount {
-    font-size: 32px;
-    font-weight: 900;
-    color: #0D9488;
-    margin-bottom: 10px;
-}
-
-.result-note {
-    font-size: 14px;
-    color: #6B7280;
-}
-
-/* Stats Section */
-.stats-section {
-    background: #F9FAFB;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.stats-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.stats-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 50px;
-    color: #1F2937;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-
-.stat-item {
-    background: #0D9488;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    color: white;
-}
-
-.stat-number {
-    font-size: 36px;
-    font-weight: 900;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 16px;
-    color: white;
-    font-weight: 600;
-}
-
-/* Tips Section */
-.tips-section {
-    padding: 40px 20px;
-}
-
-.disclaimer {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 14px;
-    color: #6B7280;
-}
-
-/* Area Layanan Section */
-.area-layanan-section .intro-text, .siapa-bisa-jual-section .intro-text, .testimoni-section .intro-text {
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.area-grid, .siapa-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.area-card, .siapa-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.area-card h3, .siapa-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #0D9488;
-}
-
-.catatan {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #6B7280;
-}
-
-/* Testimoni Section */
-.testimoni-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.testimoni-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-}
-
-.testimoni-card .stars {
-    color: #F59E0B;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.testimoni-card p {
-    flex-grow: 1;
-}
-
-.testimoni-card .author {
-    margin-top: 20px;
-    font-style: italic;
-}
-
-.testimoni-card .author small {
-    display: block;
-    color: #6B7280;
-}
-
-.lihat-lebih {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.testimoni-section h2, #faq h2, .blog-section h2, .siapa-bisa-jual-section h2, .area-layanan-section h2, #harga h2, #cara-kerja h2, .benefits-grid h2 {
-    text-align: center;
-}
-
-.benefits-section h2 {
-    text-align: center;
-}
-
-/* Blog Section */
-.blog-section .intro-text {
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.blog-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.blog-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #0D9488;
-}
-
-.blog-card a {
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
+/* LINK TAMBAHAN */
+.lihat-lebih,
 .lihat-semua {
     text-align: center;
     margin-top: 30px;
+}
+
+.lihat-lebih a,
+.lihat-semua a {
     font-weight: 600;
 }
 
-.tips-box {
-    background: #FFFBEB;
-    border: 1px solid #FDE68A;
-    border-radius: 15px;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
+/* VIDEO PLACEHOLDER */
+.video-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #F9FAFB;
 }
 
-.tips-box h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #B45309;
-    margin-bottom: 20px;
-}
-
-.tips-box ul {
-    list-style: none;
-    padding: 0;
-}
-
-.tips-box ul li {
-    margin-bottom: 10px;
-    padding-left: 25px;
+.video-placeholder {
     position: relative;
-}
-
-.tips-box ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #B45309;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 32px; }
-    h2 { font-size: 28px; }
-    .hero { padding: 120px 20px 40px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-.container-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-.calculator-section, .stats-section {
-    flex: 1 1 45%;
-    margin: 10px;
-}
-
-/* Kontak Page */
-.contact-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #E5E7EB;
-    border-radius: 10px;
-}
-
-.contact-form button {
-    background: #0D9488;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
-/* Cara Kerja Page */
-.steps-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
+.video-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.step-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    text-align: center;
-}
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 28px; }
+    .hero { padding: 100px 20px 40px; }
+    
+    .container-flex {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Tentang Kami Page */
-#tentang-kami .container > h2, #tentang-kami .container > h3 {
-    text-align: center;
-}
+    .calculator-section,
+    .stats-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 
-#tentang-kami .container > p {
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .pricing-card.featured {
+        transform: scale(1);
+    }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
-}
-
-#tentang-kami h1, #tentang-kami h2, #tentang-kami h3, #tentang-kami h4 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#tentang-kami h1 {
-    font-size: 42px;
-}
-
-#tentang-kami h2 {
-    font-size: 32px;
-    color: #0D9488;
-}
-
-#tentang-kami h3 {
-    font-size: 24px;
-}
-
-#tentang-kami h4 {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-#tentang-kami p, #tentang-kami li {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-#tentang-kami ul, #tentang-kami ol {
-    margin-bottom: 30px;
-    padding-left: 20px;
-}
-
-#tentang-kami blockquote {
-    border-left: 4px solid #0D9488;
-    padding-left: 20px;
-    margin: 30px 0;
-    font-style: italic;
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

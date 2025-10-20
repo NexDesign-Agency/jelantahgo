@@ -1,0 +1,144 @@
+{
+  "project": "JelantahGO",
+  "description": "Platform ramah lingkungan untuk pengumpulan dan daur ulang minyak jelantah di Indonesia.",
+  "defaultProvider": "gemini-2.5-pro",
+  "fallbackProviders": ["gpt-5-turbo", "gpt-4o-mini"],
+  
+  "rateLimit": {
+    "maxRetries": 10,
+    "retryDelay": 15,
+    "autoPauseOn429": true,
+    "autoResume": true
+  },
+
+  "cache": {
+    "enableCache": true,
+    "cacheDuration": 86400,
+    "cachePath": ".kilocode-cache"
+  },
+
+  "antiLimit": {
+    "enable": true,
+    "maxParallelRequests": 1,
+    "minDelayBetweenRequests": 10,
+    "autoRetryOnError": true
+  },
+
+  "templates": {
+    "html_base": {
+      "source": "index.html",
+      "enforceStructure": true,
+      "requireHeaderFooter": true,
+      "style": "css/style.css",
+      "script": "js/script.js",
+      "preserveSections": ["KEEP", "END KEEP"],
+      "disableAutoEnhance": true,
+      "contentLengthProtection": true
+    }
+  },
+
+  "seo": {
+    "mode": "yoast",
+    "rules": {
+      "titleLength": 60,
+      "descriptionLength": 155,
+      "includePrimaryKeyword": true,
+      "requireH1Keyword": true,
+      "requireAltText": true,
+      "requireInternalLinks": true,
+      "ctaRequired": true
+    },
+    "metaDefaults": {
+      "ogImage": "https://jelantahgo.com/images/og-image.jpg",
+      "twitterCard": "summary_large_image",
+      "businessName": "JelantahGO",
+      "businessEmail": "info.jelantahgo@gmail.com",
+      "businessPhone": "+62-851-8303-3995",
+      "address": "Jl. Papanggo I No. 250, Papanggo, Jakarta Utara 14340"
+    }
+  },
+
+  "schema": {
+    "autoGenerate": true,
+    "detectByPageType": {
+      "index.html": ["WebSite", "Organization"],
+      "tentang.html": ["AboutPage"],
+      "area-layanan.html": ["Service", "LocalBusiness"],
+      "mitra.html": ["Organization", "Offer"],
+      "harga.html": ["Product", "Offer"],
+      "blog.html": ["BlogPosting", "Article"],
+      "kontak.html": ["ContactPage"],
+      "faq.html": ["FAQPage"]
+    }
+  },
+
+  "structureRules": {
+    "allowedClasses": [
+      "container", "hero", "hero-subtitle",
+      "benefit-card", "pricing-card", "testimoni-card",
+      "area-card", "blog-card", "benefits-grid",
+      "pricing-table", "testimoni-grid", "area-grid",
+      "blog-grid", "cta-button", "faq-item",
+      "faq-question", "faq-answer", "steps",
+      "step", "step-number", "tips-box",
+      "stats-section", "intro-text", "lihat-lebih"
+    ],
+    "backgroundAlternating": ["#FFFFFF", "#F9FAFB"],
+    "protectFullTextSections": true,
+    "disableSummarization": true
+  },
+
+  "output": {
+    "saveToFile": true,
+    "filePathPattern": "public/{slug}.html",
+    "autoOpenInEditor": true,
+    "formatHTML": true,
+    "validateHTML": true,
+    "autoCommitGit": true,
+    "autoPushGit": true,
+    "gitBranch": "main",
+    "commitMessageTemplate": "Auto: Generate new {slug}.html [SEO optimized]",
+    "triggerNetlifyBuild": true,
+    "backupOriginal": true,
+    "backupPath": "backups/{slug}_full.html"
+  },
+
+  "lighthouse": {
+    "targetScore": 90,
+    "optimizeImages": true,
+    "lazyLoadImages": true,
+    "compressHTML": true,
+    "addViewportMeta": true
+  },
+
+  "ci": {
+    "enable": true,
+    "provider": "github",
+    "netlifyHookUrl": "https://api.netlify.com/build_hooks/YOUR_NETLIFY_HOOK_ID",
+    "autoDeployOnPush": true,
+    "autoValidateSchema": true,
+    "seoAuditOnBuild": true
+  },
+
+  "notifications": {
+    "onEdit": "⚠️ Perhatian: Jangan ubah teks dalam blok KEEP (diproteksi otomatis).",
+    "onTruncateDetected": "❌ Teks terpotong otomatis terdeteksi, proses dibatalkan.",
+    "onDeploy": "✅ Build & deploy ke Netlify berhasil tanpa kehilangan konten."
+  },
+
+  "commands": {
+    "buat halaman *": {
+      "prompt": [
+        "Kamu adalah web developer dan SEO specialist untuk JelantahGO.",
+        "Buat halaman HTML baru bernama {slug}.html dengan struktur identik dengan index.html.",
+        "Gunakan tema, warna, dan gaya visual dari index.html.",
+        "Tambahkan meta tag SEO, OG tags, JSON-LD schema sesuai jenis halaman.",
+        "Gunakan Yoast SEO best practice: judul < 60 karakter, deskripsi < 155 karakter, keyword utama di H1 dan paragraf pertama.",
+        "Gunakan internal link ke halaman lain JelantahGO.",
+        "Tambahkan CTA di akhir halaman ('Hubungi kami via WhatsApp untuk jemput gratis minyak jelantah Anda.').",
+        "Jangan meringkas isi teks yang panjang. Jika ada tag <!-- KEEP -->, abaikan pengeditan bagian itu.",
+        "Output dalam format HTML penuh siap upload ke Netlify atau Vercel."
+      ]
+    }
+  }
+}
