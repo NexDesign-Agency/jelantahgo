@@ -1,15 +1,193 @@
+/* ==========================================
+   JELANTAHGO - COMPLETE CSS FILE
+   ========================================== */
+
+/* RESET & BASE STYLES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: #1F2937;
-    padding-top: 80px; /* Memberi ruang untuk header fixed */
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* FIX: Remove any white space above header */
+
+/* ==========================================
+   HEADER MOBILE-FRIENDLY
+   ========================================== */
+
+header {
+    background: #0D9488;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 0 !important;
+}
+
+header::before {
+    display: none;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Desktop Navigation */
+.nav-links {
+    display: none;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.nav-links li a:hover {
+    opacity: 0.8;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.mobile-menu ul li {
+    margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.mobile-menu ul li a:hover {
+    color: #0D9488;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* Desktop View - 769px ke atas */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* ==========================================
+   CONTAINER & LAYOUT
+   ========================================== */
 
 .container {
     max-width: 1200px;
@@ -17,144 +195,246 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER */
-header {
-    background: white;
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
+.container-flex {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #0D9488;
+section {
+    padding: 60px 20px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+/* ==========================================
+   HERO SECTION
+   ========================================== */
 
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #1F2937;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: #0D9488;
-}
-
-/* HERO */
 .hero {
-    background: linear-gradient(135deg, #0F766E 0%, #0D9488 100%);
+    background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
     color: white;
-    padding: 120px 20px 60px;
     text-align: center;
+    padding: 80px 20px;
 }
 
-h1 {
-    font-size: 48px;
-    font-weight: 900;
+.hero h1 {
+    font-size: 36px;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
     opacity: 0.95;
 }
 
-.hero .hero-subtitle strong {
-    color: white;
+.cta-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cta-button {
-    display: inline-block;
     background: white;
     color: #0D9488;
-    padding: 15px 40px;
-    border-radius: 50px;
+    padding: 14px 28px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 18px;
-    margin: 10px;
-    transition: transform 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    display: inline-block;
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* SECTIONS */
-section {
-    padding: 60px 20px;
+/* ==========================================
+   CALCULATOR SECTION
+   ========================================== */
+
+.calculator-section {
+    background: #F9FAFB;
+    flex: 1;
+    min-width: 300px;
 }
 
-h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #1F2937;
+.calculator-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.calculator-title {
+    font-size: 28px;
+    color: #0D9488;
+    margin-bottom: 10px;
+}
+
+.liter-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.calculate-button {
+    width: 100%;
+    background: #0D9488;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calculate-button:hover {
+    background: #0f766e;
+}
+
+.result-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: #F0FDF4;
+    border-radius: 8px;
     text-align: center;
 }
 
-.intro-text {
-    font-size: 18px;
-    line-height: 1.8;
+.result-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.result-amount {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0D9488;
+    margin-bottom: 10px;
+}
+
+.result-note {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ==========================================
+   STATS SECTION
+   ========================================== */
+
+.stats-section {
+    background: white;
+    flex: 1;
+    min-width: 300px;
+}
+
+.stats-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stats-title {
+    font-size: 28px;
+    color: #0D9488;
     margin-bottom: 30px;
     text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* BENEFITS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: #F9FAFB;
+    border-radius: 10px;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0D9488;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ==========================================
+   BENEFITS SECTION
+   ========================================== */
+
+.benefits-section {
+    background: white;
+}
+
+.benefits-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0D9488;
+}
+
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .benefit-card {
-    background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    background: #F9FAFB;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
 }
 
 .benefit-card h3 {
-    color: #0D9488;
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 15px;
+    color: #333;
 }
 
-/* STEPS */
+/* ==========================================
+   STEPS/HOW IT WORKS
+   ========================================== */
+
 .steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    max-width: 1000px;
+    margin: 40px auto 0;
 }
 
 .step {
     text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .step-number {
@@ -166,175 +446,83 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 28px;
+    font-weight: bold;
     margin: 0 auto 20px;
 }
 
-/* PRICING */
+.step h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* ==========================================
+   PRICING TABLE
+   ========================================== */
+
 .pricing-table {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    max-width: 1000px;
+    margin: 40px auto 0;
 }
 
 .pricing-card {
     background: white;
     border: 2px solid #E5E7EB;
-    border-radius: 15px;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 40px 30px;
     text-align: center;
+    transition: all 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: #0D9488;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .pricing-card.featured {
-    background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
-    color: white;
-    border: none;
-    transform: scale(1.03);
+    border-color: #0D9488;
+    border-width: 3px;
+    background: #F0FDF4;
+}
+
+.pricing-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .price {
     font-size: 48px;
-    font-weight: 900;
-    margin: 20px 0;
+    font-weight: bold;
+    color: #0D9488;
+    margin-bottom: 5px;
+}
+
+.pricing-card p {
+    color: #666;
+    margin-bottom: 25px;
 }
 
 .pricing-card ul {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    text-align: left;
 }
 
 .pricing-card ul li {
-    margin: 8px 0;
+    padding: 8px 0;
+    color: #333;
 }
 
-/* KALKULATOR */
-.calculator-section {
-    background: white;
-    padding: 60px 20px;
-    text-align: center;
-}
+/* ==========================================
+   AREA & OTHER GRIDS
+   ========================================== */
 
-.calculator-container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #0D9488;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    color: white;
-}
-
-.calculator-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.liter-input {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid #E5E7EB;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.calculate-button {
-    background: white;
-    color: #0D9488;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.calculate-button:hover {
-    background: #f0fdfa;
-}
-
-.result-box {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    border: 2px solid #0D9488;
-    color: #1F2937;
-}
-
-.result-title {
-    font-size: 16px;
-    color: #6B7280;
-    margin-bottom: 10px;
-}
-
-.result-amount {
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-.result-note {
-    font-size: 14px;
-    color: #6B7280;
-}
-
-/* STATS */
-.stats-section {
-    background: #F9FAFB;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.stats-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 50px;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-
-.stat-item {
-    background: #0D9488;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    color: white;
-}
-
-.stat-number {
-    font-size: 36px;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-/* FLEX CONTAINER UNTUK KALKULATOR + STATS */
-.container-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0 20px 60px;
-}
-
-.calculator-section,
-.stats-section {
-    flex: 1 1 45%;
-    margin: 0;
-}
-
-/* AREA LAYANAN, SIAPA BISA JUAL, TESTIMONI, BLOG */
 .area-grid,
 .siapa-grid,
 .testimoni-grid,
@@ -342,7 +530,8 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    max-width: 1200px;
+    margin: 40px auto 0;
 }
 
 .area-card,
@@ -351,136 +540,116 @@ h2 {
 .blog-card {
     background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.area-card:hover,
+.siapa-card:hover,
+.testimoni-card:hover,
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .area-card h3,
-.siapa-card h3,
-.blog-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+.siapa-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
     color: #0D9488;
 }
 
-.testimoni-card .stars {
-    color: #F59E0B;
-    font-size: 20px;
+/* ==========================================
+   TESTIMONIAL
+   ========================================== */
+
+.stars {
+    color: #FFC107;
+    font-size: 24px;
     margin-bottom: 15px;
 }
 
-.testimoni-card .author {
-    margin-top: 20px;
+.testimoni-card p {
     font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
 }
 
-.testimoni-card .author small {
-    display: block;
-    color: #6B7280;
-}
-
-/* TIPS */
-.tips-section {
-    padding: 40px 20px;
-}
-
-.disclaimer {
-    text-align: center;
-    margin-bottom: 30px;
+.author {
     font-size: 14px;
-    color: #6B7280;
+    color: #666;
 }
 
-.tips-box {
-    background: #FFFBEB;
-    border: 1px solid #FDE68A;
-    border-radius: 15px;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
+.author strong {
+    display: block;
+    color: #0D9488;
+    margin-bottom: 5px;
 }
 
-.tips-box h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #B45309;
-    margin-bottom: 20px;
-}
+/* ==========================================
+   FAQ
+   ========================================== */
 
-.tips-box ul {
-    list-style: none;
-    padding: 0;
-}
-
-.tips-box ul li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.tips-box ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #B45309;
-    font-weight: bold;
-}
-
-/* FAQ */
 .faq {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto 0;
 }
 
 .faq-item {
     background: white;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .faq-question {
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 10px;
+    padding: 20px;
+    font-weight: 600;
     color: #0D9488;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-/* CTA SECTION */
+.faq-answer {
+    padding: 0 20px 20px;
+    color: #555;
+}
+
+/* ==========================================
+   CTA SECTION
+   ========================================== */
+
 .cta-section {
-    background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+    background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
     color: white;
     text-align: center;
     padding: 80px 20px;
 }
 
-.cta-section a {
-    color: white;
-    text-decoration: underline;
-}
+/* ==========================================
+   FOOTER
+   ========================================== */
 
-/* FOOTER */
 footer {
     background: #1F2937;
-    color: #D1D5DB;
-    padding: 60px 20px 40px;
+    color: white;
+    padding: 60px 20px 30px;
 }
 
 .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #374151;
+    margin-bottom: 40px;
 }
 
 .footer-column h3 {
-    color: white;
-    font-size: 18px;
     margin-bottom: 20px;
+    color: #0D9488;
 }
 
 .footer-column ul {
@@ -495,115 +664,90 @@ footer {
 .footer-column a {
     color: #D1D5DB;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-column a:hover {
-    color: white;
-    text-decoration: underline;
+    color: #0D9488;
 }
 
 .footer-bottom {
     text-align: center;
-    font-size: 14px;
+    padding-top: 30px;
+    border-top: 1px solid #374151;
+    color: #9CA3AF;
 }
 
-.social-media {
-    margin-bottom: 20px;
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+.intro-text {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
-.social-media span {
-    margin-right: 10px;
-    font-weight: 600;
-    color: white;
-}
-
-.social-media a {
-    margin: 0 10px;
-    color: #D1D5DB;
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    color: white;
-}
-
-/* LINK & STRONG */
-strong {
-    color: #0D9488;
-    font-weight: 700;
-}
-
-a {
-    color: #0D9488;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* LINK TAMBAHAN */
 .lihat-lebih,
 .lihat-semua {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
+    font-size: 16px;
 }
 
 .lihat-lebih a,
 .lihat-semua a {
+    color: #0D9488;
+    text-decoration: none;
     font-weight: 600;
 }
 
-/* VIDEO PLACEHOLDER */
-.video-section {
+.catatan {
+    margin-top: 30px;
     text-align: center;
-    padding: 60px 20px;
-    background: #F9FAFB;
+    color: #666;
+    font-size: 14px;
 }
 
-.video-placeholder {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    cursor: pointer;
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0D9488;
 }
 
-.video-placeholder img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* ==========================================
+   RESPONSIVE - MOBILE
+   ========================================== */
 
-/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    h1 { font-size: 32px; }
-    h2 { font-size: 28px; }
-    .hero { padding: 100px 20px 40px; }
-    
-    .container-flex {
-        flex-direction: column;
-        align-items: center;
+    .hero h1 {
+        font-size: 28px;
     }
 
-    .calculator-section,
-    .stats-section {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .pricing-card.featured {
-        transform: scale(1);
+    .hero-subtitle {
+        font-size: 16px;
     }
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .container-flex {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .price {
+        font-size: 36px;
+    }
+
+    .calculator-container {
+        padding: 30px 20px;
     }
 }

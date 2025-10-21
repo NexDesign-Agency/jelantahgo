@@ -40,3 +40,45 @@ document.getElementById('literInput').addEventListener('input', calculateIncome)
 
 // Hitung saat halaman load
 calculateIncome();
+
+/* ==========================================
+   HEADER MOBILE MENU JAVASCRIPT
+   Tambahkan kode ini ke file js/script.js
+   ========================================== */
+
+// Toggle Mobile Menu
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.mobile-menu-btn');
+    
+    menu.classList.toggle('active');
+    btn.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (menu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
+
+// Close menu when clicking outside (on the overlay)
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleMenu();
+            }
+        });
+    }
+});
+
+// Close menu on ESC key press
+document.addEventListener('keydown', function(e) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
+        toggleMenu();
+    }
+});
