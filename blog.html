@@ -7,22 +7,52 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">JelantahGO</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="tentang.html">Tentang</a></li>
-                <li><a href="cara-kerja.html">Cara Kerja</a></li>
-                <li><a href="harga.html">Harga</a></li>
-                <li><a href="mitra.html">Mitra</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="testimoni.html">Testimoni</a></li>
-                <li><a href="area-layanan.html">Area Layanan</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- ==========================================
+     HEADER HTML - GANTI HEADER LAMA DENGAN INI
+     ========================================== -->
+
+<!-- HEADER -->
+<header>
+    <nav class="container">
+        <div class="logo">JelantahGO</div>
+        
+        <!-- Desktop Navigation -->
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="cara-kerja.html">Cara Kerja</a></li>
+            <li><a href="harga.html">Harga</a></li>
+            <li><a href="mitra.html">Mitra</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="area-layanan.html">Area Layanan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- Mobile Menu Overlay - TARUH SETELAH </header> -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Close Menu">×</button>
+    <ul>
+        <li><a href="index.html" onclick="toggleMenu()">Beranda</a></li>
+        <li><a href="tentang.html" onclick="toggleMenu()">Tentang</a></li>
+        <li><a href="cara-kerja.html" onclick="toggleMenu()">Cara Kerja</a></li>
+        <li><a href="harga.html" onclick="toggleMenu()">Harga</a></li>
+        <li><a href="mitra.html" onclick="toggleMenu()">Mitra</a></li>
+        <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+        <li><a href="testimoni.html" onclick="toggleMenu()">Testimoni</a></li>
+        <li><a href="area-layanan.html" onclick="toggleMenu()">Area Layanan</a></li>
+        <li><a href="kontak.html" onclick="toggleMenu()">Kontak</a></li>
+    </ul>
+</div>
 
     <main>
         <section class="hero">
