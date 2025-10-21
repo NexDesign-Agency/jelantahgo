@@ -3,33 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog JelantahGO - Panduan Lengkap Seputar Minyak Jelantah, Bisnis, dan Lingkungan</title>
+    <meta name="theme-color" content="#0D9488">
+    
+    <!-- PRIMARY SEO TAGS -->
+    <title>Blog JelantahGO - Panduan Lengkap Minyak Jelantah, Bisnis & Lingkungan</title>
+    <meta name="description" content="Pusat informasi terlengkap tentang minyak jelantah, cara jual, tips bisnis, edukasi lingkungan, dan biodiesel. 69+ artikel praktis dan actionable.">
+    <meta name="keywords" content="blog jelantah, panduan jual jelantah, bisnis jelantah, biodiesel, lingkungan, cara jual minyak jelantah">
+    <link rel="canonical" href="https://jelantahgo.com/blog.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jelantahgo.com/blog.html">
+    <meta property="og:title" content="Blog JelantahGO - Panduan Lengkap Minyak Jelantah">
+    <meta property="og:description" content="69+ artikel tentang cara jual jelantah, bisnis, lingkungan, dan biodiesel. Informasi akurat dan praktis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dknswj9co/image/upload/v1760998331/jelantahgo_6_u3erug.webp">
+
+    <!-- SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog JelantahGO",
+      "description": "Pusat informasi terlengkap tentang minyak jelantah di Indonesia",
+      "url": "https://jelantahgo.com/blog.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "JelantahGO",
+        "url": "https://jelantahgo.com"
+      }
+    }
+    </script>
+
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* BLOG-SPECIFIC STYLES */
+        .blog-hero {
+            background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .blog-hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .blog-hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .category-nav {
+            background: white;
+            padding: 30px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-btn {
+            background: #F0FDFA;
+            border: 2px solid #0D9488;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            font-weight: 600;
+            color: #0D9488;
+            text-decoration: none;
+            display: block;
+        }
+
+        .category-btn:hover {
+            background: #0D9488;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .featured-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .featured-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .card-badge {
+            background: #F59E0B;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 15px 0 0 15px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #6B7280;
+            margin-bottom: 12px;
+        }
+
+        .card-description {
+            color: #4B5563;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: #0D9488;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        .articles-section {
+            padding: 60px 20px;
+            background: #F9FAFB;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: #1F2937;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #6B7280;
+        }
+
+        .article-list {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .article-item:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .article-category {
+            color: #0D9488;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 10px;
+        }
+
+        .article-excerpt {
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .stats-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #F0FDFA;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #0D9488;
+            font-weight: 600;
+        }
+
+        .newsletter-cta {
+            background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .newsletter-box {
+            max-width: 600px;
+            margin: 30px auto 0;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .newsletter-input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .subscribe-btn {
+            background: white;
+            color: #0D9488;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 32px;
+            }
+            
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- ==========================================
-     HEADER HTML - GANTI HEADER LAMA DENGAN INI
-     ========================================== -->
 
 <!-- HEADER -->
 <header>
     <nav class="container">
         <div class="logo">JelantahGO</div>
-        
-        <!-- Desktop Navigation -->
         <ul class="nav-links">
             <li><a href="index.html">Beranda</a></li>
             <li><a href="tentang.html">Tentang</a></li>
             <li><a href="cara-kerja.html">Cara Kerja</a></li>
             <li><a href="harga.html">Harga</a></li>
             <li><a href="mitra.html">Mitra</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="testimoni.html">Testimoni</a></li>
             <li><a href="area-layanan.html">Area Layanan</a></li>
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
-
-        <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
             <span></span>
             <span></span>
@@ -38,9 +333,9 @@
     </nav>
 </header>
 
-<!-- Mobile Menu Overlay - TARUH SETELAH </header> -->
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Close Menu">×</button>
+    <button class="mobile-menu-close" onclick="toggleMenu()">×</button>
     <ul>
         <li><a href="index.html" onclick="toggleMenu()">Beranda</a></li>
         <li><a href="tentang.html" onclick="toggleMenu()">Tentang</a></li>
@@ -54,128 +349,519 @@
     </ul>
 </div>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Blog JelantahGO</h1>
-                <p class="hero-subtitle">Pusat Informasi Terlengkap tentang Minyak Jelantah, Cara Jual, Tips Bisnis, dan Edukasi Lingkungan.</p>
+<!-- BLOG HERO -->
+<section class="blog-hero">
+    <div class="container">
+        <h1>Blog JelantahGO</h1>
+        <p>Pusat Informasi Terlengkap tentang Minyak Jelantah, Bisnis, dan Lingkungan</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.2); padding: 15px 25px; border-radius: 8px;">
+                <div style="font-size: 28px; font-weight: 700;">69+</div>
+                <div style="font-size: 14px; opacity: 0.9;">Artikel Published</div>
             </div>
-        </section>
-
-        <section id="blog-content" class="container">
-            <div class="card">
-                <h2>📚 Kategori Artikel</h2>
-                <ul class="category-list">
-                    <li><strong>💰 Panduan Jual Jelantah:</strong> Tips dan trik untuk memaksimalkan penghasilan dari minyak jelantah</li>
-                    <li><strong>💼 Bisnis Jelantah:</strong> Peluang usaha, analisis pasar, dan strategi bisnis pengepulan jelantah</li>
-                    <li><strong>🌍 Lingkungan & Sustainability:</strong> Dampak jelantah terhadap lingkungan dan peran kita dalam menjaganya</li>
-                    <li><strong>📖 Edukasi & Tutorial:</strong> Panduan step-by-step, how-to, dan pengetahuan umum seputar jelantah</li>
-                    <li><strong>📊 Berita & Update:</strong> Perkembangan industri jelantah, biodiesel, dan regulasi terbaru</li>
-                    <li><strong>🎯 Success Stories:</strong> Kisah sukses pelanggan dan mitra JelantahGO</li>
-                </ul>
+            <div style="background: rgba(255,255,255,0.2); padding: 15px 25px; border-radius: 8px;">
+                <div style="font-size: 28px; font-weight: 700;">258K+</div>
+                <div style="font-size: 14px; opacity: 0.9;">Total Views</div>
             </div>
-
-            <div class="card">
-                <h2>🔥 Artikel Terpopuler</h2>
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <h3>Cara Jual Minyak Jelantah yang Paling Menguntungkan di 2025</h3>
-                        <p><strong>Kategori:</strong> Panduan Jual Jelantah | <strong>Dibaca:</strong> 15.234× | <strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-                        <p>Pelajari strategi lengkap untuk mendapatkan harga tertinggi saat jual minyak jelantah. Dari cara mengumpulkan volume besar, menyimpan dengan benar, hingga tips negosiasi dengan pengepul.</p>
-                        <a href="#">Baca Selengkapnya →</a>
-                    </div>
-                    <div class="blog-card">
-                        <h3>Bahaya Buang Minyak Jelantah Sembarangan bagi Lingkungan</h3>
-                        <p><strong>Kategori:</strong> Lingkungan | <strong>Dibaca:</strong> 12.845× | <strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-                        <p>Tahukah Anda bahwa 1 liter minyak jelantah dapat mencemari 1 JUTA liter air bersih? Artikel ini mengupas tuntas dampak buruk pembuangan jelantah yang salah dan solusinya.</p>
-                        <a href="#">Baca Selengkapnya →</a>
-                    </div>
-                    <div class="blog-card">
-                        <h3>Peluang Bisnis Pengepul Jelantah: Modal Kecil Untung Besar</h3>
-                        <p><strong>Kategori:</strong> Bisnis Jelantah | <strong>Dibaca:</strong> 11.456× | <strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-                        <p>Bisnis pengepulan jelantah adalah peluang emas dengan modal kecil tapi potensi keuntungan besar. Artikel ini memberikan panduan lengkap dari A-Z untuk memulai bisnis ini.</p>
-                        <a href="#">Baca Selengkapnya →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>📝 Artikel Terbaru</h2>
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <h3>Panduan Lengkap Memulai Bisnis Pengepul Jelantah di 2025</h3>
-                        <p><strong>Kategori:</strong> Bisnis | <strong>Tanggal:</strong> 15 Oktober 2025</p>
-                        <p>Step-by-step guide untuk pemula yang ingin terjun ke bisnis pengepulan minyak jelantah...</p>
-                        <a href="#">Baca Artikel →</a>
-                    </div>
-                    <div class="blog-card">
-                        <h3>Harga Minyak Jelantah Oktober 2025: Update dan Prediksi</h3>
-                        <p><strong>Kategori:</strong> Berita & Update | <strong>Tanggal:</strong> 12 Oktober 2025</p>
-                        <p>Update harga minyak jelantah terkini di berbagai kota dan prediksi tren harga...</p>
-                        <a href="#">Baca Artikel →</a>
-                    </div>
-                    <div class="blog-card">
-                        <h3>5 Kesalahan Fatal Saat Menyimpan Minyak Jelantah</h3>
-                        <p><strong>Kategori:</strong> Tutorial | <strong>Tanggal:</strong> 8 Oktober 2025</p>
-                        <p>Kesalahan umum yang membuat kualitas jelantah menurun dan harga jual berkurang...</p>
-                        <a href="#">Baca Artikel →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>JelantahGO</h3>
-                <p>Pengepul minyak jelantah terpercaya di Jakarta dan sekitarnya. Kami membeli minyak goreng bekas dengan harga tertinggi dan menyediakan layanan penjemputan gratis.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Layanan Kami</h3>
-                <ul>
-                    <li><a href="index.html">Jual Minyak Jelantah</a></li>
-                    <li><a href="harga.html">Harga Minyak Jelantah</a></li>
-                    <li><a href="mitra.html">Program Mitra</a></li>
-                    <li><a href="cara-kerja.html">Penjemputan Gratis</a></li>
-                    <li><a href="area-layanan.html">Area Layanan</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Tentang Kami</h3>
-                <ul>
-                    <li><a href="tentang.html">Tentang JelantahGO</a></li>
-                    <li><a href="blog.html">Blog & Artikel</a></li>
-                    <li><a href="testimoni.html">Testimoni</a></li>
-                    <li><a href="kontak.html">Hubungi Kami</a></li>
-                    <li><a href="syarat-ketentuan.html">Syarat & Ketentuan</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Kontak</h3>
-                <ul>
-                    <li>📱 WhatsApp: 0851-8303-3995</li>
-                    <li>📞 Telepon: 0851-8303-3995</li>
-                    <li>📧 Email: info.jelantahgo@gmail.com</li>
-                    <li>📍 Jakarta Utara 14340</li>
-                    <li>🕒 Senin-Sabtu: 11.00-23.00</li>
-                </ul>
+            <div style="background: rgba(255,255,255,0.2); padding: 15px 25px; border-radius: 8px;">
+                <div style="font-size: 28px; font-weight: 700;">42K+</div>
+                <div style="font-size: 14px; opacity: 0.9;">Pembaca/Bulan</div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="social-media">
-                <span>Ikuti Kami:</span>
-                <a href="https://facebook.com/jelantahgo" target="_blank" rel="noopener">Facebook</a>
-                <a href="https://instagram.com/jelantahgo" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://twitter.com/jelantahgo" target="_blank" rel="noopener">Twitter</a>
-                <a href="https://youtube.com/jelantahgo" target="_blank" rel="noopener">YouTube</a>
-                <a href="https://linkedin.com/company/jelantahgo" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-            <p>&copy; 2025 JelantahGO - Pengepul Minyak Jelantah Jakarta. All Rights Reserved.</p>
-            <p>JelantahGO: Solusi jual minyak jelantah yang menguntungkan dan ramah lingkungan sejak 2020.</p>
-        </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="js/script.js"></script>
+<!-- CATEGORY NAVIGATION -->
+<nav class="category-nav">
+    <div class="category-grid">
+        <a href="#panduan" class="category-btn">💰 Panduan Jual</a>
+        <a href="#bisnis" class="category-btn">💼 Bisnis</a>
+        <a href="#lingkungan" class="category-btn">🌍 Lingkungan</a>
+        <a href="#tutorial" class="category-btn">📖 Tutorial</a>
+        <a href="#berita" class="category-btn">📊 Berita</a>
+        <a href="#stories" class="category-btn">🎯 Success Stories</a>
+    </div>
+</nav>
+
+<!-- FEATURED ARTICLES -->
+<section class="featured-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>🔥 Artikel Terpopuler</h2>
+            <p>Artikel paling banyak dibaca dan dibagikan oleh pembaca kami</p>
+        </div>
+        
+        <div class="featured-grid">
+            <!-- Article 1 -->
+            <article class="featured-card">
+                <div class="card-image">💰</div>
+                <div class="card-badge">⭐ POPULAR</div>
+                <div class="card-content">
+                    <h3 class="card-title">Cara Jual Minyak Jelantah yang Paling Menguntungkan di 2025</h3>
+                    <div class="card-meta">
+                        <span>📖 15.234× dibaca</span>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="card-description">Pelajari strategi lengkap untuk mendapatkan harga tertinggi hingga Rp 8.500/liter. Cara kumpulkan volume besar, tips penyimpanan, dan negosiasi dengan pengepul.</p>
+                    <a href="blog/cara-jual-jelantah-menguntungkan.html" class="card-link">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="featured-card">
+                <div class="card-image">🌍</div>
+                <div class="card-badge">⭐ POPULAR</div>
+                <div class="card-content">
+                    <h3 class="card-title">Bahaya Buang Minyak Jelantah Sembarangan bagi Lingkungan</h3>
+                    <div class="card-meta">
+                        <span>📖 12.845× dibaca</span>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="card-description">Tahukah Anda 1 liter jelantah dapat mencemari 1 JUTA liter air bersih? Artikel ini mengupas dampak buruk pembuangan jelantah yang salah dan solusinya.</p>
+                    <a href="blog/bahaya-buang-jelantah-sembarangan.html" class="card-link">Baca Selengkapnya →</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="featured-card">
+                <div class="card-image">💼</div>
+                <div class="card-badge">⭐ POPULAR</div>
+                <div class="card-content">
+                    <h3 class="card-title">Peluang Bisnis Pengepul Jelantah: Modal Kecil Untung Besar</h3>
+                    <div class="card-meta">
+                        <span>📖 11.456× dibaca</span>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="card-description">Panduan lengkap memulai bisnis pengepulan jelantah. Analisis modal, proyeksi keuntungan, dan strategi marketing yang terbukti efektif.</p>
+                    <a href="blog/peluang-bisnis-pengepul-jelantah.html" class="card-link">Baca Selengkapnya →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- LATEST ARTICLES -->
+<section class="articles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>📝 Artikel Terbaru</h2>
+            <p>Update terkini dari tim JelantahGO</p>
+        </div>
+
+        <div class="article-list">
+            <article class="article-item">
+                <div class="article-category">💼 BISNIS | 📅 15 Okt 2025</div>
+                <h3 class="article-title">Panduan Lengkap Memulai Bisnis Pengepul Jelantah di 2025</h3>
+                <p class="article-excerpt">Step-by-step guide untuk pemula yang ingin terjun ke bisnis pengepulan minyak jelantah. Dari persiapan modal, strategi marketing, hingga tips scale up bisnis.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="stats-badge">🔥 TRENDING</span>
+                    <a href="blog/panduan-bisnis-pengepul-jelantah.html" class="card-link">Baca Artikel →</a>
+                </div>
+            </article>
+
+            <article class="article-item">
+                <div class="article-category">📊 BERITA | 📅 12 Okt 2025</div>
+                <h3 class="article-title">Harga Minyak Jelantah Oktober 2025: Update dan Prediksi Bulan Depan</h3>
+                <p class="article-excerpt">Update harga minyak jelantah terkini di berbagai kota, faktor yang mempengaruhi, dan prediksi tren harga untuk bulan November 2025.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="stats-badge">📈 UPDATE HARGA</span>
+                    <a href="blog/harga-jelantah-oktober-2025.html" class="card-link">Baca Artikel →</a>
+                </div>
+            </article>
+
+            <article class="article-item">
+                <div class="article-category">📖 TUTORIAL | 📅 8 Okt 2025</div>
+                <h3 class="article-title">5 Kesalahan Fatal Saat Menyimpan Minyak Jelantah (dan Cara Menghindarinya)</h3>
+                <p class="article-excerpt">Kesalahan umum yang membuat kualitas jelantah menurun dan harga jual berkurang. Pelajari cara menyimpan yang benar agar mendapat harga maksimal.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="stats-badge">💡 TIPS</span>
+                    <a href="blog/kesalahan-menyimpan-jelantah.html" class="card-link">Baca Artikel →</a>
+                </div>
+            </article>
+
+            <article class="article-item">
+                <div class="article-category">🎯 SUCCESS STORY | 📅 5 Okt 2025</div>
+                <h3 class="article-title">Kisah Sukses Ibu Rina: Dari Ibu Rumah Tangga Jadi Pengepul Jelantah Sukses</h3>
+                <p class="article-excerpt">Inspiratif! Bagaimana Ibu Rina mengubah jelantah jadi bisnis yang menghasilkan Rp 3 juta per bulan sambil tetap mengurus rumah tangga.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="stats-badge">⭐ INSPIRASI</span>
+                    <a href="blog/kisah-sukses-ibu-rina.html" class="card-link">Baca Artikel →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORY SECTIONS -->
+<section id="panduan" class="articles-section" style="background: white;">
+    <div class="container">
+        <div class="section-header">
+            <h2>💰 Panduan Jual Jelantah</h2>
+            <p>Tips dan trik memaksimalkan penghasilan dari minyak jelantah</p>
+        </div>
+
+        <div class="article-list">
+            <article class="article-item">
+                <h3 class="article-title">10 Cara Mengumpulkan Minyak Jelantah 100 Liter per Bulan dari Rumah</h3>
+                <p class="article-excerpt">Panduan praktis untuk ibu rumah tangga. Dengan 10 cara ini, target 100 liter per bulan bukan hal mustahil!</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="stats-badge">📖 9.823× dibaca</span>
+                    <a href="blog/cara-kumpulkan-100-liter-jelantah.html" class="card-link">Baca Artikel →</a>
+                </div>
+            </article>
+
+            <article class="article-item">
+                <h3 class="article-title">Kapan Waktu Terbaik untuk Jual Minyak Jelantah?</h3>
+                <p class="article-excerpt">Pelajari timing yang tepat untuk jual jelantah agar dapat harga maksimal. Ada musim tertentu yang harga lebih tinggi!</p>
+                <a href="blog/waktu-terbaik-jual-jelantah.html" class="card-link">Baca Artikel →</a>
+            </article>
+
+            <article class="article-item">
+                <h3 class="article-title">Cara Negosiasi Harga dengan Pengepul Jelantah</h3>
+                <p class="article-excerpt">Tips komunikasi dan negosiasi untuk mendapatkan harga terbaik dari pengepul minyak jelantah.</p>
+                <a href="blog/negosiasi-harga-pengepul.html" class="card-link">Baca Artikel →</a>
+            </article>
+        </div>
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="#" style="color: #0D9488; font-weight: 600; font-size: 18px;">Lihat Semua Artikel Panduan (15 artikel) →</a>
+        </p>
+    </div>
+</section>
+
+<section id="lingkungan" class="articles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>🌍 Lingkungan & Sustainability</h2>
+            <p>Dampak jelantah terhadap lingkungan dan peran kita</p>
+        </div>
+
+        <div class="article-list">
+            <article class="article-item">
+                <h3 class="article-title">Mengenal Biodiesel: Dari Jelantah Jadi Bahan Bakar Ramah Lingkungan</h3>
+                <p class="article-excerpt">Kemana minyak jelantah yang Anda jual? Artikel ini menjelaskan proses transformasi jelantah menjadi biodiesel yang ramah lingkungan.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="stats-badge">📖 8.967× dibaca</span>
+                    <a href="blog/mengenal-biodiesel.html" class="card-link">Baca Artikel →</a>
+                </div>
+            </article>
+
+            <article class="article-item">
+                <h3 class="article-title">Dampak Pencemaran Jelantah terhadap Ekosistem Air</h3>
+                <p class="article-excerpt">Riset mendalam tentang bagaimana jelantah merusak kehidupan air dan langkah pencegahannya.</p>
+                <a href="blog/dampak-jelantah-ekosistem.html" class="card-link">Baca Artikel →</a>
+            </article>
+
+            <article class="article-item">
+                <h3 class="article-title">Program B30 dan Masa Depan Biodiesel Indonesia</h3>
+                <p class="article-excerpt">Penjelasan lengkap tentang program B30 pemerintah dan bagaimana jelantah berkontribusi untuk energi terbarukan.</p>
+                <a href="blog/program-b30-biodiesel.html" class="card-link">Baca Artikel →</a>
+            </article>
+        </div>
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="#" style="color: #0D9488; font-weight: 600; font-size: 18px;">Lihat Semua Artikel Lingkungan (10 artikel) →</a>
+        </p>
+    </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section class="newsletter-cta">
+    <div class="container">
+        <h2 style="font-size: 36px; margin-bottom: 15px;">📬 Subscribe Newsletter JelantahGO</h2>
+        <p style="font-size: 18px; opacity: 0.95;">Dapatkan artikel terbaru, update harga mingguan, dan tips eksklusif langsung ke email Anda</p>
+        
+        <div class="newsletter-box">
+            <h3 style="margin-bottom: 20px;">Bonus untuk Subscriber:</h3>
+            <ul style="text-align: left; margin-bottom: 25px; line-height: 1.8;">
+                <li>🎁 E-book gratis "Panduan Lengkap Bisnis Jelantah"</li>
+                <li>🎁 Template perhitungan keuntungan bisnis</li>
+                <li>🎁 Akses early bird untuk promo baru</li>
+            </ul>
+            <input type="email" class="newsletter-input" placeholder="Masukkan email Anda">
+            <button class="subscribe-btn">Subscribe Sekarang</button>
+            <p style="font-size: 13px; margin-top: 15px; opacity: 0.8;">Kami menghargai privasi Anda. Email tidak akan dibagikan.</p>
+        </div>
+    </div>
+</section>
+
+<!-- REQUEST TOPIC -->
+<section class="articles-section" style="background: white;">
+    <div class="container">
+        <div class="section-header">
+            <h2>💡 Request Topik Artikel</h2>
+            <p>Punya pertanyaan atau ingin kami bahas topik tertentu?</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; background: #F0FDFA; padding: 40px; border-radius: 12px;">
+            <p style="font-size: 18px; margin-bottom: 25px; line-height: 1.6;">Kirim request Anda dan kami akan prioritaskan topik paling banyak diminta!</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/6285183033995?text=Halo%20saya%20ingin%20request%20topik%20artikel%20tentang" 
+                   class="cta-button" 
+                   target="_blank"
+                   style="background: #0D9488; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-block;">
+                    📱 Request via WhatsApp
+                </a>
+                <a href="mailto:blog@jelantahgo.com?subject=Request%20Topik%20Artikel" 
+                   class="cta-button"
+                   style="background: white; color: #0D9488; border: 2px solid #0D9488; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-block;">
+                    📧 Request via Email
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="articles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>📱 Ikuti Kami di Social Media</h2>
+            <p>Dapatkan konten singkat, tips harian, dan update terbaru</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto;">
+            <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 48px; margin-bottom: 15px;">📸</div>
+                <h3 style="margin-bottom: 10px;">Instagram</h3>
+                <p style="color: #6B7280; margin-bottom: 15px;">Tips visual & infografis</p>
+                <a href="#" style="color: #0D9488; font-weight: 600;">@jelantahgo →</a>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 48px; margin-bottom: 15px;">📘</div>
+                <h3 style="margin-bottom: 10px;">Facebook</h3>
+                <p style="color: #6B7280; margin-bottom: 15px;">Artikel & diskusi</p>
+                <a href="#" style="color: #0D9488; font-weight: 600;">JelantahGO Jakarta →</a>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 48px; margin-bottom: 15px;">🎵</div>
+                <h3 style="margin-bottom: 10px;">TikTok</h3>
+                <p style="color: #6B7280; margin-bottom: 15px;">Video edukatif singkat</p>
+                <a href="#" style="color: #0D9488; font-weight: 600;">@jelantahgo →</a>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size: 48px; margin-bottom: 15px;">📺</div>
+                <h3 style="margin-bottom: 10px;">YouTube</h3>
+                <p style="color: #6B7280; margin-bottom: 15px;">Tutorial lengkap</p>
+                <a href="#" style="color: #0D9488; font-weight: 600;">JelantahGO Official →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY READ BLOG -->
+<section class="articles-section" style="background: white;">
+    <div class="container">
+        <div class="section-header">
+            <h2>🎯 Mengapa Harus Baca Blog JelantahGO?</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto;">
+            <div style="background: #F0FDFA; padding: 30px; border-radius: 12px; border-left: 4px solid #0D9488;">
+                <h3 style="color: #0D9488; margin-bottom: 15px;">✅ Informasi Akurat & Terpercaya</h3>
+                <p style="color: #4B5563; line-height: 1.6;">Semua artikel ditulis berdasarkan riset dan pengalaman real di lapangan.</p>
+            </div>
+            
+            <div style="background: #F0FDFA; padding: 30px; border-radius: 12px; border-left: 4px solid #0D9488;">
+                <h3 style="color: #0D9488; margin-bottom: 15px;">✅ Praktis & Actionable</h3>
+                <p style="color: #4B5563; line-height: 1.6;">Tidak hanya teori, tapi langkah konkret yang bisa langsung dipraktikkan.</p>
+            </div>
+            
+            <div style="background: #F0FDFA; padding: 30px; border-radius: 12px; border-left: 4px solid #0D9488;">
+                <h3 style="color: #0D9488; margin-bottom: 15px;">✅ Update Terkini</h3>
+                <p style="color: #4B5563; line-height: 1.6;">Selalu update dengan tren, harga, dan regulasi terbaru.</p>
+            </div>
+            
+            <div style="background: #F0FDFA; padding: 30px; border-radius: 12px; border-left: 4px solid #0D9488;">
+                <h3 style="color: #0D9488; margin-bottom: 15px;">✅ Gratis & Lengkap</h3>
+                <p style="color: #4B5563; line-height: 1.6;">Akses semua artikel tanpa biaya. Dari pemula hingga profesional.</p>
+            </div>
+            
+            <div style="background: #F0FDFA; padding: 30px; border-radius: 12px; border-left: 4px solid #0D9488;">
+                <h3 style="color: #0D9488; margin-bottom: 15px;">✅ Komunitas Aktif</h3>
+                <p style="color: #4B5563; line-height: 1.6;">Diskusi dengan sesama pembaca, share pengalaman, dan networking.</p>
+            </div>
+            
+            <div style="background: #F0FDFA; padding: 30px; border-radius: 12px; border-left: 4px solid #0D9488;">
+                <h3 style="color: #0D9488; margin-bottom: 15px;">✅ Update Rutin</h3>
+                <p style="color: #4B5563; line-height: 1.6;">Artikel baru setiap Senin, Rabu, Jumat & Sabtu. Tidak pernah kehabisan konten!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="articles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>💬 Testimoni Pembaca Blog</h2>
+            <p>Apa kata mereka yang rutin membaca blog kami?</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto;">
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #F59E0B; font-size: 24px; margin-bottom: 15px;">★★★★★</div>
+                <p style="color: #4B5563; line-height: 1.6; margin-bottom: 20px; font-style: italic;">"Blog JelantahGO sangat membantu saya memahami bisnis jelantah. Artikel-artikelnya detail dan mudah dipahami. Sekarang saya jadi mitra dan penghasilan stabil!"</p>
+                <div style="font-weight: 700; color: #1F2937;">Doni</div>
+                <div style="font-size: 14px; color: #6B7280;">Bekasi - Mitra JelantahGO</div>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #F59E0B; font-size: 24px; margin-bottom: 15px;">★★★★★</div>
+                <p style="color: #4B5563; line-height: 1.6; margin-bottom: 20px; font-style: italic;">"Saya suka artikel tentang lingkungan. Jadi lebih aware tentang pentingnya daur ulang jelantah. Thanks JelantahGO!"</p>
+                <div style="font-weight: 700; color: #1F2937;">Ibu Sari</div>
+                <div style="font-size: 14px; color: #6B7280;">Jakarta Selatan - Pembaca Setia</div>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <div style="color: #F59E0B; font-size: 24px; margin-bottom: 15px;">★★★★★</div>
+                <p style="color: #4B5563; line-height: 1.6; margin-bottom: 20px; font-style: italic;">"Tutorial-tutorialnya praktis banget. Saya ikuti step-by-step dan sekarang bisa kumpulkan 100L per bulan. Recommended!"</p>
+                <div style="font-weight: 700; color: #1F2937;">Rina</div>
+                <div style="font-size: 14px; color: #6B7280;">Tangerang - Ibu Rumah Tangga</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROMO FOR READERS -->
+<section class="articles-section" style="background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%); color: white;">
+    <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 style="color: white; font-size: 36px; margin-bottom: 20px;">🎁 Promo Khusus untuk Pembaca Blog</h2>
+            <p style="font-size: 18px; opacity: 0.95; margin-bottom: 30px;">Gunakan kode promo dan dapatkan bonus menarik!</p>
+            
+            <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 12px; margin-bottom: 30px;">
+                <div style="background: white; color: #0D9488; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: 700; margin-bottom: 20px; letter-spacing: 2px;">
+                    BLOG2025
+                </div>
+                <div style="margin-top: 20px;">
+                    <p style="font-size: 18px; margin-bottom: 10px;">✅ Bonus Rp 50.000 untuk transaksi pertama</p>
+                    <p style="font-size: 18px; margin-bottom: 10px;">✅ Free jerigen 5L</p>
+                    <p style="font-size: 18px; margin-bottom: 10px;">✅ Double poin loyalitas bulan pertama</p>
+                </div>
+            </div>
+            
+            <p style="font-size: 14px; opacity: 0.9; margin-bottom: 25px;"><strong>Syarat:</strong> Minimum volume 100L, sebutkan kode saat booking</p>
+            
+            <a href="https://wa.me/6285183033995?text=Halo%20saya%20mau%20pakai%20kode%20promo%20BLOG2025" 
+               class="cta-button" 
+               target="_blank"
+               style="background: white; color: #0D9488; padding: 15px 40px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 700; font-size: 18px;">
+                📱 Klaim Promo Sekarang
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+    <div class="container" style="text-align: center;">
+        <h2 style="color: white; font-size: 36px; margin-bottom: 20px;">Siap Jual Minyak Jelantah Anda?</h2>
+        <p style="font-size: 18px; margin-bottom: 30px;">
+            Setelah baca artikel-artikel di blog, saatnya action! Hubungi kami dan jadwalkan penjemputan GRATIS.
+        </p>
+        <div style="margin-bottom: 20px;">
+            <a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20ingin%20jual%20minyak%20jelantah" 
+               class="cta-button" 
+               style="background: white; color: #0D9488; font-size: 18px; padding: 14px 32px; display: inline-block; margin: 8px;"
+               target="_blank"
+               rel="noopener">
+                📱 WhatsApp Sekarang
+            </a>
+            <a href="tel:+6285183033995" 
+               class="cta-button" 
+               style="background: transparent; border: 2px solid white; color: white; font-size: 18px; padding: 14px 32px; display: inline-block; margin: 8px;">
+                📞 Telepon: 0851-8303-3995
+            </a>
+        </div>
+        <p style="font-size: 14px; opacity: 0.9;">
+            Operasional: Senin - Sabtu, 11.00 - 23.00<br>
+            Email: <a href="mailto:info.jelantahgo@gmail.com" style="color: white;">info.jelantahgo@gmail.com</a>
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>JelantahGO</h3>
+            <p>Pengepul minyak jelantah terpercaya di Jakarta dan sekitarnya.</p>
+            <p style="margin-top: 15px;"><strong>Blog JelantahGO</strong><br>Pusat informasi terlengkap tentang minyak jelantah</p>
+        </div>
+        <div class="footer-column">
+            <h3>Kategori Blog</h3>
+            <ul>
+                <li><a href="#panduan">Panduan Jual Jelantah</a></li>
+                <li><a href="#bisnis">Bisnis Jelantah</a></li>
+                <li><a href="#lingkungan">Lingkungan</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#berita">Berita & Update</a></li>
+                <li><a href="#stories">Success Stories</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Layanan</h3>
+            <ul>
+                <li><a href="index.html">Jual Minyak Jelantah</a></li>
+                <li><a href="harga.html">Harga</a></li>
+                <li><a href="mitra.html">Program Mitra</a></li>
+                <li><a href="cara-kerja.html">Cara Kerja</a></li>
+                <li><a href="area-layanan.html">Area Layanan</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Hubungi Kami</h3>
+            <ul>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                <li>📱 0851-8303-3995</li>
+                <li>📧 blog@jelantahgo.com</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 JelantahGO. All Rights Reserved.</p>
+        <p>Jual minyak jelantah dengan mudah, aman, dan menguntungkan.</p>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('active');
+}
+
+// Smooth scroll for category navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Newsletter subscription
+document.querySelector('.subscribe-btn').addEventListener('click', function() {
+    const emailInput = document.querySelector('.newsletter-input');
+    const email = emailInput.value.trim();
+    
+    if (email && email.includes('@')) {
+        alert('Terima kasih! Anda akan segera menerima email konfirmasi.');
+        emailInput.value = '';
+    } else {
+        alert('Mohon masukkan email yang valid.');
+    }
+});
+</script>
+
 </body>
 </html>
