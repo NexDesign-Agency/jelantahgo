@@ -36,10 +36,13 @@ function calculateIncome() {
 }
 
 // Hitung otomatis saat user mengetik
-document.getElementById('literInput').addEventListener('input', calculateIncome);
+if (document.getElementById('literInput')) {
+    // Hitung otomatis saat user mengetik
+    document.getElementById('literInput').addEventListener('input', calculateIncome);
 
-// Hitung saat halaman load
-calculateIncome();
+    // Hitung saat halaman load
+    calculateIncome();
+}
 
 /* ==========================================
    HEADER MOBILE MENU JAVASCRIPT

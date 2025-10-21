@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hubungi JelantahGO - Customer Service Siap Melayani Anda 6 Hari Seminggu</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
-<!-- ==========================================
-     HEADER HTML - GANTI HEADER LAMA DENGAN INI
-     ========================================== -->
-
 <!-- HEADER -->
 <header>
     <nav class="container">
@@ -26,7 +31,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="testimoni.html">Testimoni</a></li>
             <li><a href="area-layanan.html">Area Layanan</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kontak.html" class="active">Kontak</a></li>
         </ul>
 
         <!-- Mobile Menu Button -->
@@ -50,7 +55,7 @@
         <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
         <li><a href="testimoni.html" onclick="toggleMenu()">Testimoni</a></li>
         <li><a href="area-layanan.html" onclick="toggleMenu()">Area Layanan</a></li>
-        <li><a href="kontak.html" onclick="toggleMenu()">Kontak</a></li>
+        <li><a href="kontak.html" onclick="toggleMenu()" class="active">Kontak</a></li>
     </ul>
 </div>
 
@@ -62,7 +67,7 @@
             </div>
         </section>
 
-        <section id="contact-details" class="container">
+        <section id="contact-details" class="container" style="padding-top: 60px; padding-bottom: 60px;">
             <div class="card">
                 <h2>📱 Kontak Utama JelantahGO</h2>
                 <p><strong>WhatsApp (RECOMMENDED - Respon Tercepat!):</strong> <a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20ingin%20jual%20minyak%20jelantah">0851-8303-3995</a></p>
