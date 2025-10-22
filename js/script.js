@@ -85,3 +85,27 @@ document.addEventListener('keydown', function(e) {
         toggleMenu();
     }
 });
+/* ==========================================
+   AREA LAYANAN TABS
+   ========================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabButtons.length > 0 && tabContents.length > 0) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the target tab from data attribute
+                const targetTab = button.getAttribute('data-tab');
+
+                // Deactivate all buttons and content
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Activate the clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+    }
+});
