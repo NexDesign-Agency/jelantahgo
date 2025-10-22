@@ -3,132 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0D9488">
-    
-    <title>Cara Jual Minyak Jelantah yang Paling Menguntungkan di 2025 - JelantahGO</title>
-    <meta name="description" content="Pelajari strategi lengkap untuk mendapatkan harga tertinggi hingga Rp 8.500/liter. Cara kumpulkan volume besar, tips penyimpanan, dan negosiasi dengan pengepul.">
-    <link rel="canonical" href="https://jelantahgo.com/blog/cara-jual-jelantah-menguntungkan.html">
-
+    <title>[JUDUL_ARTIKEL] - JelantahGO</title>
+    <meta name="description" content="[DESKRIPSI_ARTIKEL]">
+    <link rel="canonical" href="https://jelantahgo.com/blog/[NAMA_FILE].html">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
+        body {
+            background-color: #F9FAFB;
+        }
         .main-content {
-            padding: 40px 0;
+            padding: 50px 0;
         }
-        .blog-container {
-            display: flex;
-            gap: 40px;
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
         }
-        .article-content {
-            flex: 3; /* 75% width */
+        @media (min-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 2.5fr 1fr;
+            }
         }
-        .sidebar {
-            flex: 1; /* 25% width */
+        .article-main {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
         }
-        .breadcrumb-section {
-            padding: 20px 0;
-            background-color: #f9fafb;
+        .article-category {
+            color: #0D9488;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
-        .article-header h1 {
-            font-size: 42px;
+        .article-main h1 {
+            font-size: 40px;
+            color: #1F2937;
+            line-height: 1.2;
             margin-bottom: 15px;
         }
-        .article-meta {
-            display: flex;
-            gap: 20px;
-            color: #666;
-            margin-bottom: 20px;
+        .article-excerpt {
+            font-size: 18px;
+            color: #6B7280;
+            margin-bottom: 25px;
         }
-        .featured-image {
+        .featured-image-placeholder {
             width: 100%;
+            height: 400px;
+            background-color: #E5E7EB;
             border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 20px;
             margin-bottom: 30px;
+        }
+        .article-body {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #374151;
         }
         .article-body h2 {
             font-size: 28px;
-            color: #0D9488;
+            color: #1F2937;
             margin-top: 40px;
             margin-bottom: 20px;
         }
-        .article-body p, .article-body li {
-            line-height: 1.8;
-            font-size: 18px;
-            color: #333;
-        }
-        .author-box {
+        .author-section {
+            border-top: 1px solid #E5E7EB;
             margin-top: 40px;
-            padding: 20px;
-            background: #f9fafb;
-            border-radius: 10px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
+            padding-top: 30px;
         }
-        .share-buttons {
-            margin-top: 20px;
+        .author-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
         }
-
-        /* Sidebar Widgets */
-        .widget {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        /* Sidebar */
+        .sidebar .widget {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
             margin-bottom: 30px;
         }
         .widget-title {
             font-size: 20px;
             font-weight: 700;
-            margin-bottom: 15px;
+            color: #1F2937;
+            margin-bottom: 20px;
         }
-        .search-widget input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .recent-posts-widget ul, .categories-widget ul {
+        .widget ul {
             list-style: none;
             padding: 0;
         }
-        .recent-posts-widget li, .categories-widget li {
-            margin-bottom: 10px;
+        .widget ul li {
+            margin-bottom: 15px;
         }
-        .cta-widget {
-            background: #0D9488;
-            color: #fff;
-            text-align: center;
+        .widget ul a {
+            text-decoration: none;
+            color: #374151;
+            transition: color 0.3s;
         }
-        .cta-widget .cta-button {
-            background: #fff;
+        .widget ul a:hover {
             color: #0D9488;
         }
-
+        .categories-widget ul a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         /* Related Articles */
-        .related-articles {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
+        .related-articles-section {
+            margin-top: 50px;
+            padding-top: 50px;
+            border-top: 1px solid #E5E7EB;
         }
-        .related-grid {
+        .related-articles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
-        .related-card {
-            background: #fff;
-            border-radius: 10px;
+        .related-article-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
         }
-        .related-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .related-card-content {
-            padding: 15px;
+        .related-article-placeholder {
+            height: 180px;
+            background-color: #E5E7EB;
         }
     </style>
 </head>
@@ -145,100 +152,66 @@
     </nav>
 </header>
 
-<nav class="breadcrumb-section">
-    <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="../index.html">Beranda</a></li>
-            <li><a href="../blog.html">Blog</a></li>
-            <li>Cara Jual Minyak Jelantah...</li>
-        </ul>
-    </div>
-</nav>
-
 <main class="main-content">
-    <div class="container blog-container">
-        <article class="article-content">
-            <header class="article-header">
-                <h1>Cara Jual Minyak Jelantah yang Paling Menguntungkan di 2025</h1>
-                <div class="article-meta">
-                    <span>Oleh: Tim JelantahGO</span>
-                    <span>Dipublikasikan: 19 Oktober 2025</span>
-                    <span>Waktu Baca: 8 Menit</span>
-                </div>
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1760998331/jelantahgo_6_u3erug.webp" alt="Grafik Harga Jelantah" class="featured-image">
-            </header>
-            <div class="article-body">
-                <p>Menjual minyak jelantah bukan lagi sekadar cara membuang limbah, tetapi telah menjadi sumber penghasilan tambahan yang menjanjikan. Di tahun 2025, dengan meningkatnya permintaan untuk biodiesel, harga jelantah semakin kompetitif. Artikel ini akan membahas strategi lengkap untuk memaksimalkan keuntungan Anda.</p>
+    <div class="container">
+        <div class="blog-layout">
+            <main class="article-main">
+                <div class="article-category">Tips & Trik</div>
+                <h1>Cara Jual Minyak Jelantah yang Paling Menguntungkan</h1>
+                <p class="article-excerpt">Temukan strategi terbaik untuk memaksimalkan penghasilan Anda dari minyak jelantah. Dari mengumpulkan volume hingga menjadi mitra, inilah panduan lengkapnya.</p>
                 
-                <h2>1. Pahami Faktor Penentu Harga</h2>
-                <p>Harga jelantah tidak flat. Beberapa faktor utama yang mempengaruhinya adalah:</p>
-                <ul>
-                    <li><strong>Volume:</strong> Semakin besar volume yang Anda jual, semakin tinggi harga per liternya. Pengepul menghemat biaya operasional dengan sekali angkut.</li>
-                    <li><strong>Kualitas:</strong> Minyak yang bersih dari air, sisa makanan, dan kotoran lain akan dihargai lebih tinggi.</li>
-                    <li><strong>Lokasi:</strong> Kemudahan akses dan jarak dari gudang pengepul juga bisa sedikit mempengaruhi harga.</li>
-                </ul>
-
-                <h2>2. Strategi Mengumpulkan Volume Besar</h2>
-                <p>Kunci utama harga tinggi adalah volume. Berikut cara efektif untuk mengumpulkan jelantah dalam jumlah besar:</p>
-                <ul>
-                    <li><strong>Kolaborasi Tetangga:</strong> Ajak 5-10 tetangga terdekat untuk mengumpulkan jelantah bersama. Jadikan rumah Anda sebagai titik pengumpulan.</li>
-                    <li><strong>Kerja Sama dengan Warung:</strong> Tawarkan diri untuk mengambil jelantah dari warung makan atau restoran kecil di sekitar Anda.</li>
-                </ul>
-
-                <div class="author-box">
-                    <p>Ditulis oleh <strong>Tim JelantahGO</strong>, ahli dalam industri daur ulang minyak jelantah dengan pengalaman lebih dari 5 tahun.</p>
+                <div class="featured-image-placeholder">
+                    <p>Gambar: Tumpukan jeriken berisi minyak jelantah bersih yang siap dijemput oleh truk JelantahGO.</p>
                 </div>
-                <div class="share-buttons">
-                    <strong>Bagikan Artikel:</strong>
-                    <!-- Add real share links later -->
-                    <a href="#" aria-label="Bagikan ke Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Bagikan ke Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Bagikan ke WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </article>
 
-        <aside class="sidebar">
-            <div class="widget search-widget">
-                <h3 class="widget-title">Cari Artikel</h3>
-                <input type="search" placeholder="Ketik kata kunci...">
-            </div>
-            <div class="widget cta-widget">
-                <h3 class="widget-title">Punya Jelantah?</h3>
-                <p>Jual jelantah Anda dengan harga terbaik sekarang!</p>
-                <a href="../harga.html" class="cta-button">Cek Harga</a>
-            </div>
-            <div class="widget recent-posts-widget">
-                <h3 class="widget-title">Artikel Terbaru</h3>
-                <ul>
-                    <li><a href="#">Bahaya Buang Jelantah Sembarangan</a></li>
-                    <li><a href="#">Peluang Bisnis Pengepul Jelantah</a></li>
-                </ul>
-            </div>
-            <div class="widget categories-widget">
-                <h3 class="widget-title">Kategori</h3>
-                <ul>
-                    <li><a href="#">Panduan Jual</a></li>
-                    <li><a href="#">Bisnis</a></li>
-                    <li><a href="#">Lingkungan</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-
-    <section class="related-articles container">
-        <h2>Artikel Terkait</h2>
-        <div class="related-grid">
-            <div class="related-card">
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1760998331/jelantahgo_6_u3erug.webp" alt="Artikel Terkait 1">
-                <div class="related-card-content">
-                    <h3>5 Kesalahan Menyimpan Jelantah</h3>
-                    <a href="#">Baca Selengkapnya</a>
+                <div class="article-body">
+                    <p>Minyak jelantah sering dianggap sebagai limbah dapur yang tidak berguna. Padahal, dengan strategi yang tepat, limbah ini bisa diubah menjadi sumber penghasilan yang menjanjikan. Kuncinya adalah mengetahui cara menjualnya agar mendapatkan keuntungan maksimal. Berikut adalah panduan lengkap untuk Anda.</p>
+                    <h2>1. Kualitas Adalah Kunci</h2>
+                    <p>Harga jual minyak jelantah sangat dipengaruhi oleh kualitasnya. Pastikan jelantah Anda bersih dari kotoran sisa makanan seperti tepung, remah-remah, atau potongan gosong. Saring minyak selagi masih hangat menggunakan saringan teh atau kain tipis sebelum menyimpannya. Jelantah yang bersih akan dihargai lebih tinggi oleh pengepul.</p>
+                    <h2>2. Kumpulkan dalam Volume Besar</h2>
+                    <p>Prinsip ekonomi sederhana berlaku di sini: semakin banyak volume yang Anda jual, semakin tinggi posisi tawar Anda. Jangan menjual jelantah dalam jumlah kecil seperti satu atau dua liter saja. Kumpulkan hingga mencapai volume yang signifikan, misalnya 20 liter atau lebih. Ajak tetangga, saudara, atau bahkan bekerja sama dengan warung makan di sekitar Anda untuk mengumpulkan jelantah bersama-sama. Ini akan memberi Anda keuntungan skala.</p>
+                    <h2>3. Pilih Pengepul yang Tepat</h2>
+                    <p>Jangan terburu-buru menjual kepada pengepul pertama yang Anda temui. Lakukan riset kecil untuk membandingkan harga. Namun, jangan hanya tergiur harga tinggi. Pilih pengepul atau perusahaan yang kredibel dan memiliki izin resmi. Perusahaan seperti JelantahGO menawarkan harga yang transparan, jadwal penjemputan yang pasti, dan proses yang profesional. Ini memberikan keamanan dan kepastian bagi Anda.</p>
+                    <h2>4. Jadilah Mitra Resmi</h2>
+                    <p>Cara paling menguntungkan untuk menjual jelantah adalah dengan menjadi mitra resmi dari perusahaan pengelola limbah. Sebagai mitra, Anda seringkali mendapatkan harga beli yang lebih tinggi, dukungan berupa wadah pengumpulan (jeriken atau drum), serta prioritas penjemputan. Menjadi mitra juga membuka peluang untuk membangun bisnis pengepulan Anda sendiri di lingkungan sekitar, di mana Anda menjadi koordinator pengumpulan dari sumber-sumber yang lebih kecil.</p>
+                    <p>Dengan menerapkan empat strategi ini, Anda tidak hanya membantu menjaga lingkungan dengan mencegah pembuangan limbah sembarangan, tetapi juga menciptakan peluang ekonomi baru langsung dari dapur Anda.</p>
                 </div>
-            </div>
-            <!-- Add more related articles -->
+
+                <div class="author-section">
+                    <h3>Tentang Penulis</h3>
+                    <p>Ditulis oleh Tim JelantahGO, ahli dalam industri daur ulang minyak jelantah. Kami berkomitmen membantu masyarakat mengubah limbah menjadi berkah melalui program kemitraan yang adil dan transparan.</p>
+                </div>
+            </main>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3 class="widget-title">Postingan Terbaru</h3>
+                    <ul>
+                        <li><a href="#">5 Bahaya Membuang Jelantah ke Saluran Air</a></li>
+                        <li><a href="#">Kisah Sukses Mitra JelantahGO: Untung Jutaan Rupiah</a></li>
+                        <li><a href="#">Minyak Jelantah Diubah Jadi Apa? Ini Jawabannya!</a></li>
+                    </ul>
+                </div>
+                <div class="widget categories-widget">
+                    <h3 class="widget-title">Kategori</h3>
+                    <ul>
+                        <li><a href="#"><span>Tips & Trik</span> <span>></span></a></li>
+                        <li><a href="#"><span>Lingkungan</span> <span>></span></a></li>
+                        <li><a href="#"><span>Berita</span> <span>></span></a></li>
+                        <li><a href="#"><span>Bisnis</span> <span>></span></a></li>
+                    </ul>
+                </div>
+            </aside>
         </div>
-    </section>
+
+        <section class="related-articles-section">
+            <h2 style="text-align: center; margin-bottom: 40px;">Artikel Terkait di 3 Kolom Ini</h2>
+            <div class="related-articles-grid">
+                <div class="related-article-card"><div class="related-article-placeholder"></div></div>
+                <div class="related-article-card"><div class="related-article-placeholder"></div></div>
+                <div class="related-article-card"><div class="related-article-placeholder"></div></div>
+            </div>
+        </section>
+    </div>
 </main>
 
 <footer>
@@ -247,6 +220,5 @@
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
 </body>
 </html>

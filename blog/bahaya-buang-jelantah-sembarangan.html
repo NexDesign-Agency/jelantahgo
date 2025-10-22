@@ -3,133 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0D9488">
-    
-    <title>Bahaya Buang Minyak Jelantah Sembarangan bagi Lingkungan - JelantahGO</title>
+    <title>Bahaya Buang Minyak Jelantah Sembarangan - JelantahGO</title>
     <meta name="description" content="Tahukah Anda 1 liter jelantah dapat mencemari 1 JUTA liter air bersih? Artikel ini mengupas dampak buruk pembuangan jelantah yang salah dan solusinya.">
     <link rel="canonical" href="https://jelantahgo.com/blog/bahaya-buang-jelantah-sembarangan.html">
-
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        .main-content {
-            padding: 40px 0;
-        }
-        .blog-container {
-            display: flex;
-            gap: 40px;
-        }
-        .article-content {
-            flex: 3; /* 75% width */
-        }
-        .sidebar {
-            flex: 1; /* 25% width */
-        }
-        .breadcrumb-section {
-            padding: 20px 0;
-            background-color: #f9fafb;
-        }
-        .article-header h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-        .article-meta {
-            display: flex;
-            gap: 20px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .featured-image {
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-        .article-body h2 {
-            font-size: 28px;
-            color: #0D9488;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        .article-body p, .article-body li {
-            line-height: 1.8;
-            font-size: 18px;
-            color: #333;
-        }
-        .author-box {
-            margin-top: 40px;
-            padding: 20px;
-            background: #f9fafb;
-            border-radius: 10px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        .share-buttons {
-            margin-top: 20px;
-        }
-
-        /* Sidebar Widgets */
-        .widget {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-            margin-bottom: 30px;
-        }
-        .widget-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .search-widget input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .recent-posts-widget ul, .categories-widget ul {
-            list-style: none;
-            padding: 0;
-        }
-        .recent-posts-widget li, .categories-widget li {
-            margin-bottom: 10px;
-        }
-        .cta-widget {
-            background: #0D9488;
-            color: #fff;
-            text-align: center;
-        }
-        .cta-widget .cta-button {
-            background: #fff;
-            color: #0D9488;
-        }
-
-        /* Related Articles */
-        .related-articles {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
-        }
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .related-card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-        }
-        .related-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .related-card-content {
-            padding: 15px;
-        }
+        body { background-color: #F9FAFB; }
+        .main-content { padding: 50px 0; }
+        .blog-layout { display: grid; grid-template-columns: 1fr; gap: 50px; }
+        @media (min-width: 992px) { .blog-layout { grid-template-columns: 2.5fr 1fr; } }
+        .article-main { background-color: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.05); }
+        .article-category { color: #0D9488; font-weight: 600; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; }
+        .article-main h1 { font-size: 40px; color: #1F2937; line-height: 1.2; margin-bottom: 15px; }
+        .article-excerpt { font-size: 18px; color: #6B7280; margin-bottom: 25px; }
+        .featured-image-placeholder { width: 100%; height: 400px; background-color: #E5E7EB; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; color: #9CA3AF; font-size: 20px; margin-bottom: 30px; }
+        .article-body { font-size: 18px; line-height: 1.8; color: #374151; }
+        .article-body h2 { font-size: 28px; color: #1F2937; margin-top: 40px; margin-bottom: 20px; }
+        .author-section { border-top: 1px solid #E5E7EB; margin-top: 40px; padding-top: 30px; }
+        .author-section h3 { font-size: 20px; margin-bottom: 15px; }
+        .sidebar .widget { background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .widget-title { font-size: 20px; font-weight: 700; color: #1F2937; margin-bottom: 20px; }
+        .widget ul { list-style: none; padding: 0; }
+        .widget ul li { margin-bottom: 15px; }
+        .widget ul a { text-decoration: none; color: #374151; transition: color 0.3s; }
+        .widget ul a:hover { color: #0D9488; }
+        .categories-widget ul a { display: flex; justify-content: space-between; align-items: center; }
+        .related-articles-section { margin-top: 50px; padding-top: 50px; border-top: 1px solid #E5E7EB; }
+        .related-articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .related-article-card { background-color: #fff; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.05); overflow: hidden; }
+        .related-article-placeholder { height: 180px; background-color: #E5E7EB; }
     </style>
 </head>
 <body>
@@ -145,90 +48,65 @@
     </nav>
 </header>
 
-<nav class="breadcrumb-section">
-    <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="../index.html">Beranda</a></li>
-            <li><a href="../blog.html">Blog</a></li>
-            <li>Bahaya Buang Minyak Jelantah...</li>
-        </ul>
-    </div>
-</nav>
-
 <main class="main-content">
-    <div class="container blog-container">
-        <article class="article-content">
-            <header class="article-header">
-                <h1>Bahaya Buang Minyak Jelantah Sembarangan bagi Lingkungan</h1>
-                <div class="article-meta">
-                    <span>Oleh: Tim JelantahGO</span>
-                    <span>Dipublikasikan: 17 Oktober 2025</span>
-                    <span>Waktu Baca: 6 Menit</span>
+    <div class="container">
+        <div class="blog-layout">
+            <main class="article-main">
+                <div class="article-category">Lingkungan</div>
+                <h1>Bahaya Buang Minyak Jelantah Sembarangan</h1>
+                <p class="article-excerpt">Tahukah Anda 1 liter jelantah dapat mencemari 1 JUTA liter air bersih? Artikel ini mengupas dampak buruk pembuangan jelantah yang salah dan solusinya.</p>
+                <div class="featured-image-placeholder">
+                    <p>Gambar: Pipa saluran air yang tersumbat oleh gumpalan lemak minyak jelantah.</p>
                 </div>
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1760998331/jelantahgo_6_u3erug.webp" alt="Pencemaran Air oleh Jelantah" class="featured-image">
-            </header>
-            <div class="article-body">
-                <p>Banyak dari kita yang masih menganggap remeh limbah minyak jelantah. Setelah memasak, seringkali jelantah langsung dibuang ke saluran pembuangan atau tanah. Padahal, tindakan ini memiliki dampak destruktif yang luar biasa bagi lingkungan.</p>
-                
-                <h2>1. Pencemaran Air Bersih</h2>
-                <p>Fakta yang paling mengejutkan adalah <strong>satu liter minyak jelantah dapat mencemari hingga satu juta liter air bersih</strong>. Lapisan minyak di permukaan air akan menghalangi masuknya oksigen dan sinar matahari, yang menyebabkan kematian biota air.</p>
-
-                <h2>2. Kerusakan Ekosistem Tanah</h2>
-                <p>Membuang jelantah ke tanah akan menyumbat pori-pori tanah, mengurangi kesuburannya, dan membunuh mikroorganisme penting. Akibatnya, tanah menjadi tidak produktif untuk pertanian.</p>
-
-                <div class="author-box">
-                    <p>Ditulis oleh <strong>Tim JelantahGO</strong>, ahli dalam industri daur ulang minyak jelantah dengan pengalaman lebih dari 5 tahun.</p>
+                <div class="article-body">
+                    <p>Membuang minyak jelantah ke saluran pembuangan seperti wastafel atau toilet mungkin tampak sepele. Namun, di balik kemudahan itu, tersembunyi dampak destruktif yang serius bagi lingkungan dan infrastruktur kita. Kebiasaan ini memicu serangkaian masalah yang merugikan, mulai dari pipa tersumbat hingga kerusakan ekosistem air.</p>
+                    <h2>Kerusakan Pipa dan Saluran Air</h2>
+                    <p>Saat minyak jelantah yang panas dibuang ke wastafel, ia akan mendingin dan membeku di dalam pipa. Lapisan lemak ini akan terus menumpuk, menangkap sisa-sisa makanan dan kotoran lainnya, hingga akhirnya membentuk gumpalan keras yang disebut <em>fatberg</em>. Gumpalan ini menyumbat pipa rumah Anda dan, lebih parah lagi, menyumbat sistem selokan kota. Akibatnya, air kotor bisa meluap kembali ke rumah, jalanan, dan bahkan mencemari sumber air bersih. Biaya perbaikan untuk mengatasi sumbatan ini sangatlah mahal.</p>
+                    <h2>Ancaman Serius bagi Ekosistem Air</h2>
+                    <p>Jika berhasil lolos dari pipa, minyak jelantah akan berakhir di sungai dan laut. Karena tidak larut dalam air, minyak akan membentuk lapisan tipis di permukaan. Lapisan ini menghalangi penetrasi sinar matahari dan pertukaran oksigen antara air dan udara. Akibatnya:</p>
+                    <ul>
+                        <li><strong>Tumbuhan air mati:</strong> Tanpa sinar matahari, proses fotosintesis terhenti dan tumbuhan air sebagai produsen utama dalam ekosistem akan mati.</li>
+                        <li><strong>Ikan dan biota air mati:</strong> Kekurangan oksigen (hipoksia) akan menyebabkan kematian massal ikan dan organisme air lainnya.</li>
+                        <li><strong>Kerusakan jangka panjang:</strong> Senyawa kimia beracun dalam jelantah dapat merusak insang ikan dan mengganggu sistem reproduksi biota air, menyebabkan kerusakan ekosistem yang sulit dipulihkan.</li>
+                    </ul>
+                    <h2>Solusi Cerdas dan Menguntungkan</h2>
+                    <p>Daripada membuangnya sembarangan, ada cara yang jauh lebih baik dan bahkan menguntungkan untuk mengelola minyak jelantah. Kumpulkan jelantah Anda dalam wadah tertutup. Setelah terkumpul cukup banyak, Anda bisa menjualnya kepada pengepul terpercaya seperti JelantahGO.</p>
+                    <p>Dengan menjualnya, Anda tidak hanya mencegah kerusakan lingkungan, tetapi juga mengubah limbah dapur menjadi sumber penghasilan tambahan. Jelantah yang terkumpul akan didaur ulang menjadi biodiesel, bahan bakar yang lebih ramah lingkungan.</p>
                 </div>
-                <div class="share-buttons">
-                    <strong>Bagikan Artikel:</strong>
-                    <a href="#" aria-label="Bagikan ke Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Bagikan ke Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Bagikan ke WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <div class="author-section">
+                    <h3>Tentang Penulis</h3>
+                    <p>Artikel ini ditulis oleh Tim JelantahGO, yang berdedikasi untuk memberikan edukasi mengenai pengelolaan limbah jelantah yang bertanggung jawab dan berkelanjutan.</p>
                 </div>
-            </div>
-        </article>
-
-        <aside class="sidebar">
-            <div class="widget search-widget">
-                <h3 class="widget-title">Cari Artikel</h3>
-                <input type="search" placeholder="Ketik kata kunci...">
-            </div>
-            <div class="widget cta-widget">
-                <h3 class="widget-title">Punya Jelantah?</h3>
-                <p>Jual jelantah Anda dengan harga terbaik sekarang!</p>
-                <a href="../harga.html" class="cta-button">Cek Harga</a>
-            </div>
-            <div class="widget recent-posts-widget">
-                <h3 class="widget-title">Artikel Terbaru</h3>
-                <ul>
-                    <li><a href="cara-jual-jelantah-menguntungkan.html">Cara Jual Jelantah Menguntungkan</a></li>
-                    <li><a href="#">Peluang Bisnis Pengepul Jelantah</a></li>
-                </ul>
-            </div>
-            <div class="widget categories-widget">
-                <h3 class="widget-title">Kategori</h3>
-                <ul>
-                    <li><a href="#">Panduan Jual</a></li>
-                    <li><a href="#">Bisnis</a></li>
-                    <li><a href="#">Lingkungan</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-
-    <section class="related-articles container">
-        <h2>Artikel Terkait</h2>
-        <div class="related-grid">
-            <div class="related-card">
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1760998331/jelantahgo_6_u3erug.webp" alt="Artikel Terkait 1">
-                <div class="related-card-content">
-                    <h3>Mengenal Biodiesel dari Jelantah</h3>
-                    <a href="#">Baca Selengkapnya</a>
+            </main>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3 class="widget-title">Postingan Terbaru</h3>
+                    <ul>
+                        <li><a href="#">5 Bahaya Membuang Jelantah ke Saluran Air</a></li>
+                        <li><a href="#">Kisah Sukses Mitra JelantahGO: Untung Jutaan Rupiah</a></li>
+                        <li><a href="#">Minyak Jelantah Diubah Jadi Apa? Ini Jawabannya!</a></li>
+                    </ul>
                 </div>
-            </div>
-            <!-- Add more related articles -->
+                <div class="widget categories-widget">
+                    <h3 class="widget-title">Kategori</h3>
+                    <ul>
+                        <li><a href="#"><span>Tips & Trik</span> <span>></span></a></li>
+                        <li><a href="#"><span>Lingkungan</span> <span>></span></a></li>
+                        <li><a href="#"><span>Berita</span> <span>></span></a></li>
+                        <li><a href="#"><span>Bisnis</span> <span>></span></a></li>
+                    </ul>
+                </div>
+            </aside>
         </div>
-    </section>
+        <section class="related-articles-section">
+            <h2 style="text-align: center; margin-bottom: 40px;">Artikel Terkait di 3 Kolom Ini</h2>
+            <div class="related-articles-grid">
+                <div class="related-article-card"><div class="related-article-placeholder"></div></div>
+                <div class="related-article-card"><div class="related-article-placeholder"></div></div>
+                <div class="related-article-card"><div class="related-article-placeholder"></div></div>
+            </div>
+        </section>
+    </div>
 </main>
 
 <footer>
@@ -237,6 +115,5 @@
     </div>
 </footer>
 
-<script src="../js/script.js"></script>
 </body>
 </html>
