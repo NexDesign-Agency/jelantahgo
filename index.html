@@ -40,7 +40,7 @@
       "name": "JelantahGO",
       "image": "https://res.cloudinary.com/dknswj9co/image/upload/v1760998331/jelantahgo_6_u3erug.webp",
       "url": "https://jelantahgo.com",
-      "telephone": "+6285183033995",
+      "telephone": "+628518303395",
       "email": "info.jelantahgo@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -66,7 +66,6 @@
       "serviceType": "Used cooking oil collection and recycling"
     }
     </script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,7 +119,7 @@
     <meta name="author" content="JelantahGO">
 
     <!-- =================================================== -->
-    <!--          CRITICAL CSS (MENGHILANGKAN CLS)             -->
+    <!--          CRITICAL CSS (DIPERBARUI UNTUK FIX CLS)     -->
     <!-- =================================================== -->
     <style>
         /* Reset & Base Styles */
@@ -128,18 +127,20 @@
         html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
         /* Header & Nav */
         header { background: #0D9488; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
         header nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 50px; width: auto; vertical-align: middle; }
+        .logo a { color: white; text-decoration: none; font-size: 28px; font-weight: 700; vertical-align: middle; }
         .mobile-menu-btn { display: block; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1001; }
         .mobile-menu-btn span { display: block; width: 25px; height: 3px; background: white; margin: 5px 0; border-radius: 3px; }
         .nav-links { display: none; }
         @media (min-width: 769px) { .nav-links { display: flex; list-style: none; gap: 28px; } .mobile-menu-btn { display: none; } }
         .nav-links li a { color: white; text-decoration: none; font-size: 16px; }
-        /* Hero Section */
+
+        /* PERBAIKAN: GAYA HERO DIMASUKKAN KE SINI UNTUK MENGHILANGKAN CLS */
         .hero { background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%); color: white; text-align: center; padding: 80px 20px; }
-        .hero h1 { font-size: 38px; margin-bottom: 20px; line-height: 1.3; }
+        .hero h1 { font-size: 38px; margin-bottom: 20px; line-height: 1.3; font-weight: 700; }
         .hero-subtitle { font-size: 18px; margin-bottom: 40px; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
         .cta-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
         .cta-button { background: white; color: #0D9488; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; }
@@ -156,17 +157,12 @@
 </head>
 <body>
 
-<!-- ==========================================
-     HEADER HTML - GANTI HEADER LAMA DENGAN INI
-     ========================================== -->
-
-<!-- HEADER -->
+<!-- HEADER (Menggunakan Logo Teks) -->
 <header>
     <nav class="container">
-        <!-- KODE BARU (GUNAKAN INI) -->
-<div class="logo">
-    <a href="/index.html" title="Kembali ke Beranda JelantahGO">JelantahGO</a>
-</div>
+        <div class="logo">
+            <a href="/index.html" title="Kembali ke Beranda JelantahGO">JelantahGO</a>
+        </div>
         
         <!-- Desktop Navigation -->
         <ul class="nav-links">
@@ -190,7 +186,7 @@
     </nav>
 </header>
 
-<!-- Mobile Menu Overlay - TARUH SETELAH </header> -->
+<!-- Mobile Menu Overlay -->
 <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Close Menu">×</button>
     <ul>
@@ -259,13 +255,13 @@
           srcset="https://res.cloudinary.com/dknswj9co/image/upload/w_400,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp 400w,
           https://res.cloudinary.com/dknswj9co/image/upload/w_800,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp 800w,
           https://res.cloudinary.com/dknswj9co/image/upload/w_1200,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp 1200w"
-  sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
-  src="https://res.cloudinary.com/dknswj9co/image/upload/w_1200,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp" 
-  alt="Tim JelantahGO sedang menjemput minyak jelantah dari pelanggan di Jakarta dan membayar tunai langsung"
-  loading="lazy" 
-  width="1200" 
-  height="630" 
-  style="max-width: 100%; height: auto; border-radius: 15px;">
+		  sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
+		  src="https://res.cloudinary.com/dknswj9co/image/upload/w_1200,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp" 
+		  alt="Tim JelantahGO sedang menjemput minyak jelantah dari pelanggan di Jakarta dan membayar tunai langsung"
+		  loading="lazy" 
+		  width="1200" 
+		  height="630" 
+		  style="max-width: 100%; height: auto; border-radius: 15px;">
     </div>
 </section>
 
@@ -288,7 +284,7 @@
             </div>
             <div class="benefit-card">
                  <h3>🌍 Ramah Lingkungan</h3>
-    <p>Minyak jelantah diolah menjadi biodiesel. Pelajari bagaimana langkah kecil ini <a href="/blog/ancaman-dan-peluang-minyak-jelantah.html" title="Ancaman & Peluang Minyak Jelantah">mencegah pencemaran lingkungan dan menciptakan peluang ekonomi</a>.</p>
+				 <p>Minyak jelantah diolah menjadi biodiesel. Pelajari bagaimana langkah kecil ini <a href="/blog/ancaman-dan-peluang-minyak-jelantah.html" title="Ancaman & Peluang Minyak Jelantah">mencegah pencemaran lingkungan dan menciptakan peluang ekonomi</a>.</p>
             </div>
         </div>
     </div>
@@ -575,9 +571,7 @@
     </div>
 </section>
 
-<!-- =================================================== -->
-<!--               OPTIMIZED FOOTER SECTION                -->
-<!-- =================================================== -->
+<!-- OPTIMIZED FOOTER SECTION -->
 <footer>
     <div class="footer-container container">
 
@@ -616,37 +610,24 @@
         </div>
 
       <!-- Kolom 4: Jangkauan Layanan Spesifik -->
-<div class="footer-column">
-    <h3>Jangkauan Utama Kami</h3>
-    <ul>
-        <li><a href="/blog/jual-minyak-jelantah-jakarta.html" title="Panduan Lengkap Jual Minyak Jelantah di Jakarta">DKI Jakarta</a></li>
-        
-        <!-- Ganti dengan URL Pilar Tangerang jika sudah ada, jika belum, arahkan ke area-layanan -->
-        <li><a href="/blog/jual-minyak-jelantah-tangerang.html" title="Layanan Penjemputan di Tangerang & Tangsel">Tangerang & Tangsel</a></li>
-        
-        <!-- Ganti dengan URL Pilar Bekasi jika sudah ada, jika belum, arahkan ke area-layanan -->
-        <li><a href="/blog/jual-minyak-jelantah-bekasi.html" title="Layanan Penjemputan di Bekasi">Bekasi</a></li>
-        
-        <!-- Ganti dengan URL Pilar Depok/Bogor jika sudah ada, jika belum, arahkan ke area-layanan -->
-        <li><a href="/blog/jual-minyak-jelantah-depok-bogor.html" title="Layanan Penjemputan di Depok & Bogor">Depok & Bogor</a></li>
-    </ul>
-</div>
-
+		<div class="footer-column">
+			<h3>Jangkauan Utama Kami</h3>
+			<ul>
+				<li><a href="/blog/jual-minyak-jelantah-jakarta.html" title="Panduan Lengkap Jual Minyak Jelantah di Jakarta">DKI Jakarta</a></li>
+				<li><a href="/blog/jual-minyak-jelantah-tangerang.html" title="Layanan Penjemputan di Tangerang & Tangsel">Tangerang & Tangsel</a></li>
+				<li><a href="/blog/jual-minyak-jelantah-bekasi.html" title="Layanan Penjemputan di Bekasi">Bekasi</a></li>
+				<li><a href="/blog/jual-minyak-jelantah-depok-bogor.html" title="Layanan Penjemputan di Depok & Bogor">Depok & Bogor</a></li>
+			</ul>
+		</div>
+	</div>
     <div class="footer-bottom">
         <div class="container">
             <p>&copy; 2025 JelantahGO. All Rights Reserved. Mengubah Limbah Menjadi Berkah.</p>
-            <div class="footer-socials">
-                <!-- Tambahkan link media sosial Anda jika ada -->
-                <!-- <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
-                <!-- <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
-            </div>
         </div>
     </div>
 </footer>
 
-<!-- =================================================== -->
-<!--           FLOATING WHATSAPP BUTTON SECTION            -->
-<!-- =================================================== -->
+<!-- FLOATING WHATSAPP BUTTON SECTION -->
 <a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20tertarik%20dengan%20layanan%20Anda." 
    class="floating-whatsapp-btn" 
    target="_blank" 
@@ -654,9 +635,8 @@
    aria-label="Hubungi kami via WhatsApp">
     <i class="icon-whatsapp"></i>
 </a>
-<!-- =================================================== -->
 
-<!-- LAZY LOAD VIDEO SCRIPT (FIXED: no scroll jump) -->
+<!-- SCRIPTS -->
 <script>
 function loadVideo(container) {
     if (container.hasAttribute('data-loaded')) return;
@@ -673,8 +653,6 @@ function loadVideo(container) {
     container.appendChild(iframe);
 }
 </script>
-
-<!-- KALKULATOR SCRIPT -->
 <script src="js/script.js" defer></script>
 
 </body>
