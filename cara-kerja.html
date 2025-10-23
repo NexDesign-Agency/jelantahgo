@@ -70,13 +70,6 @@
     }
     </script>
 
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="JelantahGO">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <!-- Custom Styles for Redesigned Page -->
     <style>
         .work-process-section {
@@ -277,14 +270,27 @@
 </head>
 <body>
 
+<meta name="robots" content="index, follow">
+    <meta name="author" content="JelantahGO">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ==========================================
+     HEADER HTML - GANTI HEADER LAMA DENGAN INI
+     ========================================== -->
+
 <!-- HEADER -->
 <header>
     <nav class="container">
-        <div class="logo" style="padding-top: 10px;"><img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761173720/jelantahgo-logo_m6jyvf.webp" alt="JelantahGO Logo" style="height: 40px;"></div>
+        <div class="logo"><img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761175962/jelantahgo_logo_azsas5.webp" alt="JelantahGO Logo" style="height: 80px;"></div>
+        
+        <!-- Desktop Navigation -->
         <ul class="nav-links">
             <li><a href="index.html">Beranda</a></li>
             <li><a href="tentang.html">Tentang</a></li>
-            <li><a href="cara-kerja.html" class="active">Cara Kerja</a></li>
+            <li><a href="cara-kerja.html">Cara Kerja</a></li>
             <li><a href="harga.html">Harga</a></li>
             <li><a href="mitra.html">Mitra</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -292,19 +298,23 @@
             <li><a href="area-layanan.html">Area Layanan</a></li>
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
+
+        <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
     </nav>
 </header>
 
-<!-- Mobile Menu Overlay -->
+<!-- Mobile Menu Overlay - TARUH SETELAH </header> -->
 <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Close Menu">×</button>
     <ul>
         <li><a href="index.html" onclick="toggleMenu()">Beranda</a></li>
         <li><a href="tentang.html" onclick="toggleMenu()">Tentang</a></li>
-        <li><a href="cara-kerja.html" onclick="toggleMenu()" class="active">Cara Kerja</a></li>
+        <li><a href="cara-kerja.html" onclick="toggleMenu()">Cara Kerja</a></li>
         <li><a href="harga.html" onclick="toggleMenu()">Harga</a></li>
         <li><a href="mitra.html" onclick="toggleMenu()">Mitra</a></li>
         <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
@@ -333,7 +343,7 @@
         <!-- Step 1 -->
         <div class="work-step">
             <div class="work-step__image-container">
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/w_800,q_auto,f_auto/v1761001505/step1_kumpulkan_jelantah.webp" alt="Mengumpulkan Minyak Jelantah" class="work-step__image">
+                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761171104/jelantah-go_9_pdl5dv.webp" alt="Langkah 1: Kumpulkan minyak jelantah dalam jerigen atau wadah tertutup" class="work-step__image">
             </div>
             <div class="work-step__text-container">
                 <span class="step-tag">Langkah 1</span>
@@ -361,7 +371,7 @@
         <!-- Step 2 -->
         <div class="work-step">
             <div class="work-step__image-container">
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/w_800,q_auto,f_auto/v1761001505/step2_hubungi_kami.webp" alt="Menghubungi JelantahGO" class="work-step__image">
+                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761171104/jelantah-go_8_aa2c3g.webp" alt="Langkah 2: Hubungi tim JelantahGO melalui WhatsApp atau telepon" class="work-step__image">
             </div>
             <div class="work-step__text-container">
                 <span class="step-tag">Langkah 2</span>
@@ -379,7 +389,7 @@ Jadwal Jemput: [Tanggal & Jam]</div>
         <!-- Step 3 -->
         <div class="work-step">
             <div class="work-step__image-container">
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/w_800,q_auto,f_auto/v1761001505/step3_penjemputan.webp" alt="Proses Penjemputan Jelantah" class="work-step__image">
+                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761171104/jelantah-go_10_rs4pcn.webp" alt="Langkah 3: Tim JelantahGO datang menjemput minyak jelantah sesuai jadwal" class="work-step__image">
             </div>
             <div class="work-step__text-container">
                 <span class="step-tag">Langkah 3</span>
@@ -404,7 +414,7 @@ Jadwal Jemput: [Tanggal & Jam]</div>
         <!-- Step 4 -->
         <div class="work-step">
             <div class="work-step__image-container">
-                <img src="https://res.cloudinary.com/dknswj9co/image/upload/w_800,q_auto,f_auto/v1761001505/step4_pembayaran.webp" alt="Pembayaran Tunai Jelantah" class="work-step__image">
+                <img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761171104/jelantah-go_2_awh3lr.webp" alt="Langkah 4: Terima pembayaran tunai langsung setelah penimbangan selesai" class="work-step__image">
             </div>
             <div class="work-step__text-container">
                 <span class="step-tag">Langkah 4</span>
@@ -549,44 +559,86 @@ Total: 85 * 7.500 = Rp 637.500</div>
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- =================================================== -->
+<!--               OPTIMIZED FOOTER SECTION                -->
+<!-- =================================================== -->
 <footer>
-    <div class="footer-container">
-        <div class="footer-column">
-            <h3>JelantahGO</h3>
-            <p>Pengepul minyak jelantah terpercaya di Jakarta dan sekitarnya.</p>
+    <div class="footer-container container">
+
+        <!-- Kolom 1: Identitas & Trust Signal -->
+        <div class="footer-column" id="footer-about">
+            <h3 class="footer-logo">JelantahGO</h3>
+            <p>Kami membeli dengan harga terbaik, layanan profesional, dan komitmen pada lingkungan.</p>
+            <div class="footer-address">
+                <strong>Kantor Kami:</strong><br>
+                Jl. Papanggo I No. 250, 3C<br>
+                Tanjung Priok, Jakarta Utara, 14340
+            </div>
         </div>
+
+        <!-- Kolom 2: Layanan Utama -->
         <div class="footer-column">
-            <h3>Layanan</h3>
+            <h3>Layanan Utama</h3>
             <ul>
-                <li><a href="index.html">Jual Minyak Jelantah</a></li>
-                <li><a href="harga.html">Harga</a></li>
-                <li><a href="mitra.html">Program Mitra</a></li>
-                <li><a href="cara-kerja.html">Cara Kerja</a></li>
+                <li><a href="/index.html" title="Jual Minyak Jelantah">Jual Minyak Jelantah</a></li>
+                <li><a href="/cara-kerja.html" title="Cara Kerja Penjualan Jelantah">Cara Kerja</a></li>
+                <li><a href="/harga.html" title="Update Harga Jelantah Terbaru">Harga Terbaru</a></li>
+                <li><a href="/faq.html" title="Pertanyaan yang Sering Diajukan">Tanya Jawab (FAQ)</a></li>
+                <li><a href="/testimoni.html" title="Testimoni Pelanggan JelantahGO">Testimoni Pelanggan</a></li>
             </ul>
         </div>
+
+        <!-- Kolom 3: Peluang & Informasi -->
         <div class="footer-column">
-            <h3>Area</h3>
+            <h3>Peluang & Informasi</h3>
             <ul>
-                <li>Jakarta</li>
-                <li>Tangerang</li>
-                <li>Bekasi</li>
-                <li>Depok & Bogor</li>
+                <li><a href="/mitra.html" title="Program Mitra Pengepul Jelantah">Program Kemitraan</a></li>
+                <li><a href="/blog.html" title="Blog Edukasi Minyak Jelantah">Blog & Panduan</a></li>
+                <li><a href="/tentang.html" title="Tentang JelantahGO">Tentang Kami</a></li>
+                <li><a href="/blog/ancaman-dan-peluang-minyak-jelantah.html" title="Bahaya & Manfaat Minyak Jelantah">Manfaat Daur Ulang</a></li>
             </ul>
         </div>
-        <div class="footer-column">
-            <h3>Info</h3>
-            <ul>
-                <li><a href="tentang.html">Tentang Kami</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
-            </ul>
-        </div>
-    </div>
+
+      <!-- Kolom 4: Jangkauan Layanan Spesifik -->
+<div class="footer-column">
+    <h3>Jangkauan Utama Kami</h3>
+    <ul>
+        <li><a href="/blog/jual-minyak-jelantah-jakarta.html" title="Panduan Lengkap Jual Minyak Jelantah di Jakarta">DKI Jakarta</a></li>
+        
+        <!-- Ganti dengan URL Pilar Tangerang jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-tangerang.html" title="Layanan Penjemputan di Tangerang & Tangsel">Tangerang & Tangsel</a></li>
+        
+        <!-- Ganti dengan URL Pilar Bekasi jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-bekasi.html" title="Layanan Penjemputan di Bekasi">Bekasi</a></li>
+        
+        <!-- Ganti dengan URL Pilar Depok/Bogor jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-depok-bogor.html" title="Layanan Penjemputan di Depok & Bogor">Depok & Bogor</a></li>
+    </ul>
+</div>
+
     <div class="footer-bottom">
-        <p>&copy; 2025 JelantahGO. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 JelantahGO. All Rights Reserved. Mengubah Limbah Menjadi Berkah.</p>
+            <div class="footer-socials">
+                <!-- Tambahkan link media sosial Anda jika ada -->
+                <!-- <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                <!-- <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+            </div>
+        </div>
     </div>
 </footer>
+
+<!-- =================================================== -->
+<!--           FLOATING WHATSAPP BUTTON SECTION            -->
+<!-- =================================================== -->
+<a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20tertarik%20dengan%20layanan%20Anda." 
+   class="floating-whatsapp-btn" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Hubungi kami via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<!-- =================================================== -->
 
 <script>
     // FAQ Toggle

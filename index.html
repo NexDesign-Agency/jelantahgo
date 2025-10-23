@@ -10,6 +10,8 @@
     <meta name="description" content="Jual minyak jelantah Jakarta dapat uang tunai HINGGA Rp 8.500/liter. Dijemput GRATIS ke lokasi Anda. Bayar langsung di tempat. Hubungi kami untuk harga terbaru!">
     <meta name="keywords" content="jual minyak jelantah jakarta, pengepul minyak jelantah jakarta, harga minyak jelantah, jual jelantah, minyak goreng bekas, pengepul jelantah terdekat">
     <link rel="canonical" href="https://jelantahgo.com/">
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="icon" href="https://res.cloudinary.com/dknswj9co/image/upload/v1761172234/favicon_jelantahgo_kjxjs4.webp" type="image/webp">
 
     <!-- OPEN GRAPH / FACEBOOK -->
@@ -115,6 +117,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="JelantahGO">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -125,7 +128,14 @@
 <!-- HEADER -->
 <header>
     <nav class="container">
-        <div class="logo" style="padding-top: 10px;"><img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761175962/jelantahgo_logo_azsas5.webp" alt="JelantahGO Logo" style="height: 80px;"></div>
+        <div class="logo"><img srcset="https://res.cloudinary.com/dknswj9co/image/upload/w_160,q_auto,f_auto/v1761175962/jelantahgo_logo_azsas5.webp 160w,
+           https://res.cloudinary.com/dknswj9co/image/upload/w_320,q_auto,f_auto/v1761175962/jelantahgo_logo_azsas5.webp 320w"
+   sizes="(max-width: 768px) 160px, 320px"
+   src="https://res.cloudinary.com/dknswj9co/image/upload/w_320,q_auto,f_auto/v1761175962/jelantahgo_logo_azsas5.webp" 
+   alt="JelantahGO Logo" 
+   width="250" 
+   height="125"> 
+ <!-- Atur width & height sesuai rasio asli logo Anda --></div>
         
         <!-- Desktop Navigation -->
         <ul class="nav-links">
@@ -215,12 +225,16 @@
 <section class="image-section" style="text-align: center; padding: 60px 20px;">
     <div class="container">
         <img 
-          src="https://res.cloudinary.com/dknswj9co/image/upload/w_1200,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp" 
-          alt="Tim JelantahGO sedang menjemput minyak jelantah dari pelanggan di Jakarta dan membayar tunai langsung"
-          loading="lazy"
-          width="1200"
-          height="630"
-          style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          srcset="https://res.cloudinary.com/dknswj9co/image/upload/w_400,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp 400w,
+          https://res.cloudinary.com/dknswj9co/image/upload/w_800,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp 800w,
+          https://res.cloudinary.com/dknswj9co/image/upload/w_1200,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp 1200w"
+  sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
+  src="https://res.cloudinary.com/dknswj9co/image/upload/w_1200,q_auto,f_auto/v1760998331/jelantahgo_6_u3erug.webp" 
+  alt="Tim JelantahGO sedang menjemput minyak jelantah dari pelanggan di Jakarta dan membayar tunai langsung"
+  loading="lazy" 
+  width="1200" 
+  height="630" 
+  style="max-width: 100%; height: auto; border-radius: 15px;">
     </div>
 </section>
 
@@ -539,7 +553,7 @@
         <!-- Kolom 1: Identitas & Trust Signal -->
         <div class="footer-column" id="footer-about">
             <h3 class="footer-logo">JelantahGO</h3>
-            <p>Partner terpercaya Anda dalam mengubah minyak jelantah menjadi nilai. Kami membeli limbah dapur Anda dengan harga terbaik, layanan profesional, dan komitmen pada lingkungan.</p>
+            <p>Kami membeli dengan harga terbaik, layanan profesional, dan komitmen pada lingkungan.</p>
             <div class="footer-address">
                 <strong>Kantor Kami:</strong><br>
                 Jl. Papanggo I No. 250, 3C<br>
@@ -570,21 +584,22 @@
             </ul>
         </div>
 
-        <!-- Kolom 4: Area Layanan & Kontak (SEO Lokal & CTA) -->
-        <div class="footer-column">
-            <h3>Jangkauan & Kontak</h3>
-            <ul>
-                <li><a href="/area-layanan.html" title="Area Layanan di Jakarta">DKI Jakarta</a></li>
-                <li><a href="/area-layanan.html" title="Area Layanan di Tangerang">Tangerang & Tangsel</a></li>
-                <li><a href="/area-layanan.html" title="Area Layanan di Bekasi">Bekasi</a></li>
-                <li><a href="/area-layanan.html" title="Area Layanan di Depok & Bogor">Depok & Bogor</a></li>
-            </ul>
-            <a href="https://wa.me/6285183033995?text=Halo%20JelantahGO" class="footer-cta-button" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp
-            </a>
-        </div>
-
-    </div>
+      <!-- Kolom 4: Jangkauan Layanan Spesifik -->
+<div class="footer-column">
+    <h3>Jangkauan Utama Kami</h3>
+    <ul>
+        <li><a href="/blog/jual-minyak-jelantah-jakarta.html" title="Panduan Lengkap Jual Minyak Jelantah di Jakarta">DKI Jakarta</a></li>
+        
+        <!-- Ganti dengan URL Pilar Tangerang jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-tangerang.html" title="Layanan Penjemputan di Tangerang & Tangsel">Tangerang & Tangsel</a></li>
+        
+        <!-- Ganti dengan URL Pilar Bekasi jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-bekasi.html" title="Layanan Penjemputan di Bekasi">Bekasi</a></li>
+        
+        <!-- Ganti dengan URL Pilar Depok/Bogor jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-depok-bogor.html" title="Layanan Penjemputan di Depok & Bogor">Depok & Bogor</a></li>
+    </ul>
+</div>
 
     <div class="footer-bottom">
         <div class="container">
@@ -598,8 +613,17 @@
     </div>
 </footer>
 
-<!-- Tambahkan Font Awesome jika belum ada (untuk ikon WhatsApp) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- =================================================== -->
+<!--           FLOATING WHATSAPP BUTTON SECTION            -->
+<!-- =================================================== -->
+<a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20tertarik%20dengan%20layanan%20Anda." 
+   class="floating-whatsapp-btn" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Hubungi kami via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<!-- =================================================== -->
 
 <!-- LAZY LOAD VIDEO SCRIPT (FIXED: no scroll jump) -->
 <script>

@@ -12,8 +12,10 @@
     <link rel="canonical" href="https://jelantahgo.com/blog.html">
 
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="https://res.cloudinary.com/dknswj9co/image/upload/v1761172234/favicon_jelantahgo_kjxjs4.webp" type="image/webp">
+    <meta name="author" content="JelantahGO">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         /* BLOG-SPECIFIC STYLES */
         .blog-hero { background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%); color: white; padding: 80px 20px 60px; text-align: center; }
@@ -39,21 +41,72 @@
 </head>
 <body>
 
+
+
+<!-- ==========================================
+     HEADER HTML - GANTI HEADER LAMA DENGAN INI
+     ========================================== -->
+
+<!-- HEADER -->
 <header>
     <nav class="container">
-        <div class="logo" style="padding-top: 10px;"><img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761173720/jelantahgo-logo_m6jyvf.webp" alt="JelantahGO Logo" style="height: 40px;"></div>
+        <div class="logo"><img src="https://res.cloudinary.com/dknswj9co/image/upload/v1761175962/jelantahgo_logo_azsas5.webp" alt="JelantahGO Logo" style="height: 80px;"></div>
+        
+        <!-- Desktop Navigation -->
         <ul class="nav-links">
             <li><a href="index.html">Beranda</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="cara-kerja.html">Cara Kerja</a></li>
+            <li><a href="harga.html">Harga</a></li>
+            <li><a href="mitra.html">Mitra</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="area-layanan.html">Area Layanan</a></li>
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </header>
+
+<!-- Mobile Menu Overlay - TARUH SETELAH </header> -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Close Menu">×</button>
+    <ul>
+        <li><a href="index.html" onclick="toggleMenu()">Beranda</a></li>
+        <li><a href="tentang.html" onclick="toggleMenu()">Tentang</a></li>
+        <li><a href="cara-kerja.html" onclick="toggleMenu()">Cara Kerja</a></li>
+        <li><a href="harga.html" onclick="toggleMenu()">Harga</a></li>
+        <li><a href="mitra.html" onclick="toggleMenu()">Mitra</a></li>
+        <li><a href="blog.html" onclick="toggleMenu()">Blog</a></li>
+        <li><a href="testimoni.html" onclick="toggleMenu()">Testimoni</a></li>
+        <li><a href="area-layanan.html" onclick="toggleMenu()">Area Layanan</a></li>
+        <li><a href="kontak.html" onclick="toggleMenu()">Kontak</a></li>
+    </ul>
+</div>
 
 <section class="blog-hero">
     <div class="container">
         <h1>Blog JelantahGO</h1>
         <p>Pusat Informasi Terlengkap tentang Minyak Jelantah, Bisnis, dan Lingkungan</p>
+    </div>
+</section>
+
+<!-- IMAGE SECTION -->
+<section class="image-section" style="text-align: center; padding: 60px 20px; background-color: #F9FAFB;">
+    <div class="container">
+        <img
+          src="https://res.cloudinary.com/dknswj9co/image/upload/v1761171103/jelantah-go_6_sop0by.webp"
+          alt="Kumpulan artikel dan panduan lengkap mengenai bisnis minyak jelantah dari JelantahGO"
+          loading="lazy"
+          width="1200"
+          height="630"
+          style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
     </div>
 </section>
 
@@ -200,7 +253,6 @@
                 <p class="pillar-excerpt">Panduan lokal paling komprehensif untuk warga dan bisnis yang ingin menjual minyak jelantah di semua wilayah DKI Jakarta, mencakup harga, cara jual, dan tips memilih pengepul terpercaya di Jakarta.</p>
                 <a href="blog/jual-minyak-jelantah-jakarta.html" class="pillar-link">Baca Panduan Jakarta →</a>
             </div>
-        </div>
             <div class="cluster-grid">
                 <div class="cluster-card">
                     <h3 class="cluster-title">Pengepul Jelantah Jakarta Selatan: Solusi Cepat Kafe & Resto</h3>
@@ -223,14 +275,118 @@
                     <a href="blog/manajemen-limbah-jelantah-jakarta-pusat.html" class="cluster-link">Baca Selengkapnya →</a>
                 </div>
             </div>
+
+        <!-- PILLAR LOKAL: TANGERANG -->
+        <div class="pillar-card">
+            <div class="pillar-content">
+                <span class="pillar-badge">⭐ ARTIKEL PILAR LOKAL</span>
+                <h2 class="pillar-title">Jual Minyak Jelantah Tangerang & Tangsel: Panduan Lengkap 2025</h2>
+                <p class="pillar-excerpt">Panduan spesifik untuk warga dan bisnis di Tangerang Raya (Kota, Tangsel, Kabupaten) yang ingin menjual jelantah dengan harga terbaik dan layanan profesional.</p>
+                <a href="blog/jual-minyak-jelantah-tangerang.html" class="pillar-link">Baca Panduan Tangerang →</a>
+            </div>
+        </div>
+
+        <!-- PILLAR LOKAL: BEKASI -->
+        <div class="pillar-card">
+            <div class="pillar-content">
+                <span class="pillar-badge">⭐ ARTIKEL PILAR LOKAL</span>
+                <h2 class="pillar-title">Jual Minyak Jelantah Bekasi: Panduan untuk Warga & Industri 2025</h2>
+                <p class="pillar-excerpt">Panduan lengkap untuk warga dan pelaku industri di seluruh wilayah Bekasi (Kota dan Kabupaten) yang ingin menjual jelantah dengan layanan jemput gratis.</p>
+                <a href="blog/jual-minyak-jelantah-bekasi.html" class="pillar-link">Baca Panduan Bekasi →</a>
+            </div>
+        </div>
+
+        <!-- PILLAR LOKAL: DEPOK & BOGOR -->
+        <div class="pillar-card">
+            <div class="pillar-content">
+                <span class="pillar-badge">⭐ ARTIKEL PILAR LOKAL</span>
+                <h2 class="pillar-title">Jual Minyak Jelantah Depok & Bogor: Panduan Kuliner & Warga 2025</h2>
+                <p class="pillar-excerpt">Panduan untuk warga dan bisnis kuliner di Depok dan Bogor yang ingin menjual minyak jelantah mereka secara mudah, cepat, dan menguntungkan.</p>
+                <a href="blog/jual-minyak-jelantah-depok-bogor.html" class="pillar-link">Baca Panduan Depok & Bogor →</a>
+            </div>
         </div>
 </section>
 
+<!-- =================================================== -->
+<!--               OPTIMIZED FOOTER SECTION                -->
+<!-- =================================================== -->
 <footer>
-    <div class="footer-container">
-        <p>&copy; 2025 JelantahGO. All Rights Reserved.</p>
+    <div class="footer-container container">
+
+        <!-- Kolom 1: Identitas & Trust Signal -->
+        <div class="footer-column" id="footer-about">
+            <h3 class="footer-logo">JelantahGO</h3>
+            <p>Kami membeli dengan harga terbaik, layanan profesional, dan komitmen pada lingkungan.</p>
+            <div class="footer-address">
+                <strong>Kantor Kami:</strong><br>
+                Jl. Papanggo I No. 250, 3C<br>
+                Tanjung Priok, Jakarta Utara, 14340
+            </div>
+        </div>
+
+        <!-- Kolom 2: Layanan Utama -->
+        <div class="footer-column">
+            <h3>Layanan Utama</h3>
+            <ul>
+                <li><a href="/index.html" title="Jual Minyak Jelantah">Jual Minyak Jelantah</a></li>
+                <li><a href="/cara-kerja.html" title="Cara Kerja Penjualan Jelantah">Cara Kerja</a></li>
+                <li><a href="/harga.html" title="Update Harga Jelantah Terbaru">Harga Terbaru</a></li>
+                <li><a href="/faq.html" title="Pertanyaan yang Sering Diajukan">Tanya Jawab (FAQ)</a></li>
+                <li><a href="/testimoni.html" title="Testimoni Pelanggan JelantahGO">Testimoni Pelanggan</a></li>
+            </ul>
+        </div>
+
+        <!-- Kolom 3: Peluang & Informasi -->
+        <div class="footer-column">
+            <h3>Peluang & Informasi</h3>
+            <ul>
+                <li><a href="/mitra.html" title="Program Mitra Pengepul Jelantah">Program Kemitraan</a></li>
+                <li><a href="/blog.html" title="Blog Edukasi Minyak Jelantah">Blog & Panduan</a></li>
+                <li><a href="/tentang.html" title="Tentang JelantahGO">Tentang Kami</a></li>
+                <li><a href="/blog/ancaman-dan-peluang-minyak-jelantah.html" title="Bahaya & Manfaat Minyak Jelantah">Manfaat Daur Ulang</a></li>
+            </ul>
+        </div>
+
+      <!-- Kolom 4: Jangkauan Layanan Spesifik -->
+<div class="footer-column">
+    <h3>Jangkauan Utama Kami</h3>
+    <ul>
+        <li><a href="/blog/jual-minyak-jelantah-jakarta.html" title="Panduan Lengkap Jual Minyak Jelantah di Jakarta">DKI Jakarta</a></li>
+        
+        <!-- Ganti dengan URL Pilar Tangerang jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-tangerang.html" title="Layanan Penjemputan di Tangerang & Tangsel">Tangerang & Tangsel</a></li>
+        
+        <!-- Ganti dengan URL Pilar Bekasi jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-bekasi.html" title="Layanan Penjemputan di Bekasi">Bekasi</a></li>
+        
+        <!-- Ganti dengan URL Pilar Depok/Bogor jika sudah ada, jika belum, arahkan ke area-layanan -->
+        <li><a href="/blog/jual-minyak-jelantah-depok-bogor.html" title="Layanan Penjemputan di Depok & Bogor">Depok & Bogor</a></li>
+    </ul>
+</div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2025 JelantahGO. All Rights Reserved. Mengubah Limbah Menjadi Berkah.</p>
+            <div class="footer-socials">
+                <!-- Tambahkan link media sosial Anda jika ada -->
+                <!-- <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                <!-- <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+            </div>
+        </div>
     </div>
 </footer>
+
+<!-- =================================================== -->
+<!--           FLOATING WHATSAPP BUTTON SECTION            -->
+<!-- =================================================== -->
+<a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20tertarik%20dengan%20layanan%20Anda." 
+   class="floating-whatsapp-btn" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Hubungi kami via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<!-- =================================================== -->
 
 </body>
 </html>
