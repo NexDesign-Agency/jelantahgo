@@ -119,7 +119,7 @@
     <meta name="author" content="JelantahGO">
 
     <!-- =================================================== -->
-    <!--          CRITICAL CSS (DIPERBARUI UNTUK FIX CLS)     -->
+    <!--          CRITICAL CSS (FINAL VERSION)               -->
     <!-- =================================================== -->
     <style>
         /* Reset & Base Styles */
@@ -138,12 +138,57 @@
         @media (min-width: 769px) { .nav-links { display: flex; list-style: none; gap: 28px; } .mobile-menu-btn { display: none; } }
         .nav-links li a { color: white; text-decoration: none; font-size: 16px; }
 
-        /* PERBAIKAN: GAYA HERO DIMASUKKAN KE SINI UNTUK MENGHILANGKAN CLS */
+        /* GAYA HERO DIMASUKKAN KE SINI UNTUK MENGHILANGKAN CLS */
         .hero { background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%); color: white; text-align: center; padding: 80px 20px; }
         .hero h1 { font-size: 38px; margin-bottom: 20px; line-height: 1.3; font-weight: 700; }
         .hero-subtitle { font-size: 18px; margin-bottom: 40px; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
         .cta-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
         .cta-button { background: white; color: #0D9488; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; }
+
+        /* === SELURUH ISI FONTELLO.CSS DIMASUKKAN DI SINI === */
+        @font-face {
+          font-family: 'fontello';
+          src: url('../webfonts/fontello.eot?91310055');
+          src: url('../webfonts/fontello.eot?91310055#iefix') format('embedded-opentype'),
+               url('../webfonts/fontello.woff2?91310055') format('woff2'),
+               url('../webfonts/fontello.woff?91310055') format('woff'),
+               url('../webfonts/fontello.ttf?91310055') format('truetype'),
+               url('../webfonts/fontello.svg?91310055#fontello') format('svg');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+        [class^="icon-"]:before, [class*=" icon-"]:before {
+          font-family: "fontello";
+          font-style: normal;
+          font-weight: normal;
+          speak: never;
+          display: inline-block;
+          text-decoration: inherit;
+          width: 1em;
+          margin-right: .2em;
+          text-align: center;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1em;
+          margin-left: .2em;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .icon-book-open:before { content: '\e800'; }
+        .icon-leaf:before { content: '\e801'; }
+        .icon-left-big:before { content: '\e802'; }
+        .icon-right-big:before { content: '\e803'; }
+        .icon-pin:before { content: '\e804'; }
+        .icon-location:before { content: '\e805'; }
+        .icon-network:before { content: '\e806'; }
+        .icon-twitter:before { content: '\f099'; }
+        .icon-facebook:before { content: '\f09a'; }
+        .icon-mobile:before { content: '\f10b'; }
+        .icon-instagram:before { content: '\f16d'; }
+        .icon-whatsapp:before { content: '\f232'; }
+        .icon-handshake-o:before { content: '\f2b5'; }
+        .icon-address-book-o:before { content: '\f2ba'; }
     </style>
     <!-- =================================================== -->
 
@@ -151,9 +196,9 @@
     <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="css/style.css"></noscript>
     
-    <!-- Memuat Fontello secara Asynchronous -->
-    <link rel="stylesheet" href="css/fontello.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/fontello.css"></noscript>
+    <!-- BARIS INI DIHAPUS/DIKOMENTARI KARENA CSS-NYA SUDAH DI-INLINE -->
+    <!-- <link rel="stylesheet" href="css/fontello.css" media="print" onload="this.media='all'"> -->
+    <!-- <noscript><link rel="stylesheet" href="css/fontello.css"></noscript> -->
 </head>
 <body>
 
@@ -210,7 +255,7 @@
             Cari harga jual minyak jelantah Jakarta terbaik? JelantahGO memberikan harga tertinggi mulai dari <strong>Rp 7.500 hingga Rp 8.500 per liter</strong>. Melayani Jakarta, Tangerang, Bekasi, Depok & Bogor. Dapatkan penjemputan GRATIS dan bayar tunai langsung!
         </p>
         <div class="cta-group">
-            <a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20ingin%20jual%20minyak%20jelantah" class="cta-button" target="_blank" rel="noopener">📱 WhatsApp Sekarang</a>
+            <a href="https://wa.me/6285183033995?text=Halo%20JelantahGO,%20saya%20ingin%20jual%20minyak%20jelantah" class="cta-button" target="_blank" rel="noopener"><i class="icon-whatsapp"></i> WhatsApp Sekarang</a>
             <a href="#kalkulator" class="cta-button">💰 Hitung Penghasilan</a>
         </div>
     </div>
@@ -540,7 +585,7 @@
                style="background: white; color: #0D9488; font-size: 18px; padding: 14px 32px; display: inline-block; margin: 8px;"
                target="_blank"
                rel="noopener">
-                📱 WhatsApp Sekarang
+                <i class="icon-whatsapp"></i> WhatsApp Sekarang
             </a>
             <a href="tel:+6285183033995" 
                class="cta-button" 
