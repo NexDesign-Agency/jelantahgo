@@ -133,14 +133,11 @@ header nav {
 
 /* --- STYLING LOGO BARU DIMULAI DI SINI --- */
 .logo a {
-    display: flex; /* Memastikan link dan gambar sejajar */
-    align-items: center;
-}
-
-.logo img {
-    height: 50px; /* Atur TINGGI logo untuk layar desktop */
-    width: auto;  /* Biarkan lebar menyesuaikan secara otomatis */
-    vertical-align: middle; /* Menjaga kesejajaran vertikal */
+    color: white;
+    text-decoration: none;
+    font-size: 28px; /* Anda bisa sesuaikan ukurannya */
+    font-weight: 700; /* Membuat teks tebal */
+    vertical-align: middle;
 }
 /* --- AKHIR DARI STYLING LOGO BARU --- */
 
@@ -824,9 +821,6 @@ footer {
         padding: 60px 20px;
     }
      /* --- TAMBAHKAN KODE INI UNTUK LOGO MOBILE --- */
-    .logo img {
-        height: 45px; /* Buat logo sedikit lebih kecil di layar mobile */
-    }
     /* --- AKHIR DARI KODE TAMBAHAN --- */
     .hero h1 {
         font-size: 32px;
